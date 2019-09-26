@@ -2110,3 +2110,43 @@ Processing by TweetsController#index as HTML
 Completed 200 OK in 223ms (Views: 205.0ms | ActiveRecord: 5.8ms)
 
 
+Started GET "/tweets" for ::1 at 2019-09-26 23:06:37 +0900
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/nishiotetsurou/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.6ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/views/tweets/index.html.erb:7
+  Rendered tweets/index.html.erb within layouts/application (13.8ms)
+Completed 200 OK in 226ms (Views: 206.3ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/tweets/1" for ::1 at 2019-09-26 23:06:41 +0900
+Processing by TweetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" WHERE "tweets"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:37
+  Rendering tweets/show.html.erb within layouts/application
+  Rendered tweets/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 36ms (Views: 20.8ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/tweets/1/edit" for ::1 at 2019-09-26 23:06:43 +0900
+Processing by TweetsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" WHERE "tweets"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:37
+  Rendering tweets/edit.html.erb within layouts/application
+  Rendered tweets/_form.html.erb (6.8ms)
+  Rendered tweets/edit.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 28ms (Views: 24.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tweets/new" for ::1 at 2019-09-26 23:06:46 +0900
+Processing by TweetsController#new as HTML
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/_form.html.erb (1.6ms)
+  Rendered tweets/new.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 30ms (Views: 25.0ms | ActiveRecord: 0.0ms)
+
+

@@ -1,0 +1,22 @@
+<% if @tweet.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= @tweet.errors.count %>件のエラーがあります。</h2>
+    <ul>
+    <% @tweet.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<%= form_with(model: @tweet, local: true) do |form| %>
+  <div class="tweets_content">
+    <p>いまどうしてる？</p>>
+    <%= form.text_field :content %>
+  </div>
+  <%= form.submit "Tweetする" %>
+<% end %>
+
+<%= link_to "タイムラインに戻る", tweets_path %>
+
+

@@ -7,8 +7,12 @@ class TweetsController < ApplicationController
     @tweet = Tweet.new
   end
   def create
-    Tweet.create(blog_params)
-    redirect_to new_tweet_path
+    @tweet = Tweet.new(blog_params)
+    if @tweet.save
+      redirect_to new_tweet_path, notice:"Tweetを投稿しました。"
+    else
+      render :new
+    end
   end
   def show
     @tweet = Tweet.find(params[:id])

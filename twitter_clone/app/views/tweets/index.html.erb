@@ -1,5 +1,4 @@
 <h1>Tweet一覧</h1>
-
 <table>
   <tr>
     <th>みんなのTweet</th>
@@ -9,10 +8,10 @@
   <tr>
     <td><%= tweet.content %></td>
     <td><%= link_to '詳細を確認する', tweet_path(tweet.id) %></td>
+    <td><%= link_to "tweetを編集する", edit_tweet_path(tweet.id) %></td>
   </tr>
 <% end %>
 
-<%= link_to '新しくTweetを投稿する', new_tweet_path %>
-
-
 </table>
+
+<%= link_to 'Tweetする', new_tweet_path %>

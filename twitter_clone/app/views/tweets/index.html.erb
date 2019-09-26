@@ -1,0 +1,15 @@
+<h1>Tweet一覧</h1>
+
+<table>
+  <tr>
+    <th>みんなのTweet</th>
+  </tr>
+
+<% @tweet.each do |tweet| %>
+  <tr>
+    <td><%= tweet.content %></td>
+  </tr>
+<% end %>
+
+
+</table>

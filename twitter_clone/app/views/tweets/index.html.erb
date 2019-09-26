@@ -8,8 +8,11 @@
 <% @tweet.each do |tweet| %>
   <tr>
     <td><%= tweet.content %></td>
+    <td><%= link_to '詳細を確認する', tweet_path(tweet.id) %></td>
   </tr>
 <% end %>
+
+<%= link_to '新しくTweetを投稿する', new_tweet_path %>
 
 
 </table>

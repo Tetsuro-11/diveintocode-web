@@ -10,6 +10,9 @@ class TweetsController < ApplicationController
     Tweet.create(blog_params)
     redirect_to new_tweet_path
   end
+  def show
+    @tweet = Tweet.find(params[:id])
+  end
 
   private
   def blog_params

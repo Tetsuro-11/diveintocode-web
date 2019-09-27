@@ -2391,3 +2391,2728 @@ Processing by TweetsController#index as HTML
 Completed 200 OK in 34ms (Views: 30.9ms | ActiveRecord: 0.2ms)
 
 
+Started DELETE "/tweets/1" for ::1 at 2019-09-26 23:23:29 +0900
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/nishiotetsurou/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by TweetsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"nCnfMm7OQeqON0oqU0/6SrHRSNVDGOuACbWmGoJbmbkNA7rdgbqtZDAbQ0oY8QSr8xtw8oFniCVJvI6hkNZLUQ==", "id"=>"1"}
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" WHERE "tweets"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:42
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:36
+  [1m[36mTweet Destroy (0.3ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 1]]
+  ↳ app/controllers/tweets_controller.rb:36
+  [1m[35m (4.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:36
+Redirected to http://localhost:3000/tweets
+Completed 302 Found in 27ms (ActiveRecord: 9.6ms)
+
+
+Started GET "/tweets" for ::1 at 2019-09-26 23:23:29 +0900
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.2ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/views/tweets/index.html.erb:7
+  Rendered tweets/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 164ms (Views: 161.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tweets" for ::1 at 2019-09-26 23:24:30 +0900
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/nishiotetsurou/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.4ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/views/tweets/index.html.erb:8
+  Rendered tweets/index.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 157ms (Views: 144.6ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/tweets" for ::1 at 2019-09-26 23:24:35 +0900
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/views/tweets/index.html.erb:8
+  Rendered tweets/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 23ms (Views: 18.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tweets/new" for ::1 at 2019-09-26 23:24:37 +0900
+Processing by TweetsController#new as HTML
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/_form.html.erb (10.4ms)
+  Rendered tweets/new.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 49ms (Views: 43.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tweets" for ::1 at 2019-09-26 23:24:42 +0900
+Processing by TweetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5pMiw5teo/OecY9mxRBqxMAmcwbvb0Q5xU/JFkdYZX4jwrcP8Zia2PsuyAg71HkT3cjLnuG+QSe4/e6OEN0a+w==", "tweet"=>{"content"=>"こんばんは"}, "commit"=>"Tweetする"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:14
+  [1m[36mTweet Create (0.5ms)[0m  [1m[32mINSERT INTO "tweets" ("content") VALUES ($1) RETURNING "id"[0m  [["content", "こんばんは"]]
+  ↳ app/controllers/tweets_controller.rb:14
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:14
+Redirected to http://localhost:3000/tweets/new
+Completed 302 Found in 7ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/tweets/new" for ::1 at 2019-09-26 23:24:42 +0900
+Processing by TweetsController#new as HTML
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/_form.html.erb (1.1ms)
+  Rendered tweets/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 23ms (Views: 21.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tweets" for ::1 at 2019-09-26 23:24:44 +0900
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/views/tweets/index.html.erb:8
+  Rendered tweets/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 26ms (Views: 23.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tweets/6/edit" for ::1 at 2019-09-26 23:24:47 +0900
+Processing by TweetsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mTweet Load (0.6ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" WHERE "tweets"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:42
+  Rendering tweets/edit.html.erb within layouts/application
+  Rendered tweets/_form.html.erb (1.3ms)
+  Rendered tweets/edit.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 31ms (Views: 21.8ms | ActiveRecord: 0.8ms)
+
+
+Started PATCH "/tweets/6" for ::1 at 2019-09-26 23:25:04 +0900
+Processing by TweetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LsBxUrZhWXcWu0FVPamDyTlwQF+5VCmKVicQxSy5vD+7hg7EcuCBZ61Vz/kUb2ktBt5+Cx2exLfQWFV9c5O/eA==", "tweet"=>{"content"=>"おはようございます。今日もお仕事頑張ろう"}, "commit"=>"Tweetする", "id"=>"6"}
+  [1m[36mTweet Load (0.6ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" WHERE "tweets"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:42
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:28
+  [1m[36mTweet Update (0.4ms)[0m  [1m[33mUPDATE "tweets" SET "content" = $1 WHERE "tweets"."id" = $2[0m  [["content", "おはようございます。今日もお仕事頑張ろう"], ["id", 6]]
+  ↳ app/controllers/tweets_controller.rb:28
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:28
+Redirected to http://localhost:3000/tweets/6
+Completed 302 Found in 6ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/tweets/6" for ::1 at 2019-09-26 23:25:04 +0900
+Processing by TweetsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" WHERE "tweets"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:42
+  Rendering tweets/show.html.erb within layouts/application
+  Rendered tweets/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 36ms (Views: 32.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tweets" for ::1 at 2019-09-26 23:25:12 +0900
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/views/tweets/index.html.erb:8
+  Rendered tweets/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 32ms (Views: 26.9ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/tweets/4" for ::1 at 2019-09-26 23:25:22 +0900
+Processing by TweetsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"/3eykngJONOGJm7XheeRh0TGYR2Cd9PuetkhJX48gm9uXdd9l33UXTgKZ7fOWW9mBgxZOkAIsEs60AmebLFQhw==", "id"=>"4"}
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" WHERE "tweets"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:42
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:36
+  [1m[36mTweet Destroy (0.7ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 4]]
+  ↳ app/controllers/tweets_controller.rb:36
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:36
+Redirected to http://localhost:3000/tweets
+Completed 302 Found in 7ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/tweets" for ::1 at 2019-09-26 23:25:22 +0900
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.2ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/views/tweets/index.html.erb:8
+  Rendered tweets/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 23ms (Views: 20.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tweets" for ::1 at 2019-09-26 23:39:15 +0900
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/nishiotetsurou/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.5ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/views/tweets/index.html.erb:8
+  Rendered tweets/index.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 228ms (Views: 202.0ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/tweets/new" for ::1 at 2019-09-26 23:39:17 +0900
+Processing by TweetsController#new as HTML
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/_form.html.erb (8.3ms)
+  Rendered tweets/new.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 43ms (Views: 35.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tweets/confirm" for ::1 at 2019-09-26 23:39:22 +0900
+Processing by TweetsController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tDpl8uIngfkifE4wNwBV3ucXvIBL1UFfhjAks0L8eEMItf/JBvChDNJKqH2F8VsdJfUI2BhwU1yN3s+VQvGxPA==", "tweet"=>{"content"=>"こんにちは"}, "commit"=>"Tweetする"}
+  Rendering tweets/confirm.html.erb within layouts/application
+  Rendered tweets/confirm.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 21ms (Views: 16.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tweets" for ::1 at 2019-09-26 23:39:26 +0900
+Processing by TweetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NhRekdmB/VcNkjULma4Q0tJa8P3vtxRqHi/j3kne6x6nPjt+NvUR2bO+PGvSEO4zkJDI2i3Id89eJstlW1M59g==", "tweet"=>{"content"=>"こんにちは"}, "commit"=>"登録する"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:14
+  [1m[36mTweet Create (0.4ms)[0m  [1m[32mINSERT INTO "tweets" ("content") VALUES ($1) RETURNING "id"[0m  [["content", "こんにちは"]]
+  ↳ app/controllers/tweets_controller.rb:14
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:14
+Redirected to http://localhost:3000/tweets/new
+Completed 302 Found in 7ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/tweets/new" for ::1 at 2019-09-26 23:39:26 +0900
+Processing by TweetsController#new as HTML
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/_form.html.erb (1.1ms)
+  Rendered tweets/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 28ms (Views: 25.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tweets/new" for ::1 at 2019-09-26 23:40:21 +0900
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/nishiotetsurou/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by TweetsController#new as HTML
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/_form.html.erb (5.3ms)
+  Rendered tweets/new.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 195ms (Views: 172.3ms | ActiveRecord: 3.2ms)
+
+
+Started POST "/tweets/confirm" for ::1 at 2019-09-26 23:40:28 +0900
+Processing by TweetsController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Nlo+8EMk3Hva7nylRK/AIrbO8Swvx0lcSLiI8lpwEuancFsfrFAw9WTCdcUPET7D9ATJC+24KvkIsaBJSP3ADg==", "tweet"=>{"content"=>"こんにちは"}, "commit"=>"Tweetする"}
+  Rendering tweets/confirm.html.erb within layouts/application
+  Rendered tweets/confirm.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 20ms (Views: 16.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tweets" for ::1 at 2019-09-26 23:40:32 +0900
+Processing by TweetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BLvpw/xeCVKT9cCOK/sXPufL+t8HkOy0Pubtpsf5FC+VkYwsEyrl3C3Zye5gRenfpQHC+MXvjxF+78Ud1XTGxw==", "tweet"=>{"content"=>"こんにちは"}, "commit"=>"Tweet"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:14
+  [1m[36mTweet Create (0.8ms)[0m  [1m[32mINSERT INTO "tweets" ("content") VALUES ($1) RETURNING "id"[0m  [["content", "こんにちは"]]
+  ↳ app/controllers/tweets_controller.rb:14
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:14
+Redirected to http://localhost:3000/tweets/new
+Completed 302 Found in 6ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/tweets/new" for ::1 at 2019-09-26 23:40:32 +0900
+Processing by TweetsController#new as HTML
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/_form.html.erb (1.0ms)
+  Rendered tweets/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 21ms (Views: 18.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tweets/confirm" for ::1 at 2019-09-26 23:41:10 +0900
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/nishiotetsurou/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by TweetsController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uVycRDmPdP1KWDt6ITiY5JridlHNSgp3SYL4Vn28csoodvmr1vuYc/R0MhpqhmYF2ChOdg81adIJi9DtbzGgIg==", "tweet"=>{"content"=>"こんにちは"}, "commit"=>"Tweetする"}
+  Rendering tweets/confirm.html.erb within layouts/application
+  Rendered tweets/confirm.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 176ms (Views: 159.1ms | ActiveRecord: 3.5ms)
+
+
+Started POST "/tweets" for ::1 at 2019-09-26 23:41:12 +0900
+Processing by TweetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/EL2d6usf3vEZuS9IAnFj/9zxyWM9bC8RZ4SkdmNWCZtaJOYRNiT9XpK7d1rtztuvbn/Ak6K0xkFlzoqywCKzg==", "tweet"=>{"content"=>"こんにちは"}, "commit"=>"Tweetを送信"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:14
+  [1m[36mTweet Create (0.5ms)[0m  [1m[32mINSERT INTO "tweets" ("content") VALUES ($1) RETURNING "id"[0m  [["content", "こんにちは"]]
+  ↳ app/controllers/tweets_controller.rb:14
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:14
+Redirected to http://localhost:3000/tweets/new
+Completed 302 Found in 4ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/tweets/new" for ::1 at 2019-09-26 23:41:13 +0900
+Processing by TweetsController#new as HTML
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/_form.html.erb (0.9ms)
+  Rendered tweets/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 22ms (Views: 18.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tweets/confirm" for ::1 at 2019-09-26 23:41:22 +0900
+Processing by TweetsController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3aiUAbnm0b3W+WrZXI7qmMrNETK2Y9o3M8nM82x/eMVMgvHuVpI9M2jVY7kXMBR5iAcpFXQcuZJzwORIfvKqLQ==", "tweet"=>{"content"=>"今日も一日頑張ったぞ"}, "commit"=>"Tweetする"}
+  Rendering tweets/confirm.html.erb within layouts/application
+  Rendered tweets/confirm.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 28ms (Views: 23.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tweets" for ::1 at 2019-09-26 23:41:23 +0900
+Processing by TweetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BCixtRNddWs223ejQ7698MJvfFkwrISc/bl5E0krHTaVAtRa/CmZ5Yj3fsMIAEMRgKVEfvLT5zm9sFGoW6bP3g==", "tweet"=>{"content"=>"今日も一日頑張ったぞ"}, "commit"=>"Tweetを送信"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:14
+  [1m[36mTweet Create (0.2ms)[0m  [1m[32mINSERT INTO "tweets" ("content") VALUES ($1) RETURNING "id"[0m  [["content", "今日も一日頑張ったぞ"]]
+  ↳ app/controllers/tweets_controller.rb:14
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:14
+Redirected to http://localhost:3000/tweets/new
+Completed 302 Found in 4ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/tweets/new" for ::1 at 2019-09-26 23:41:23 +0900
+Processing by TweetsController#new as HTML
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/_form.html.erb (0.8ms)
+  Rendered tweets/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 20ms (Views: 16.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tweets" for ::1 at 2019-09-26 23:44:41 +0900
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/nishiotetsurou/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.6ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/views/tweets/index.html.erb:8
+  Rendered tweets/index.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 199ms (Views: 174.0ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/tweets/15/edit" for ::1 at 2019-09-26 23:44:44 +0900
+Processing by TweetsController#edit as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mTweet Load (0.4ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" WHERE "tweets"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:46
+  Rendering tweets/edit.html.erb within layouts/application
+  Rendered tweets/_form.html.erb (7.5ms)
+  Rendered tweets/edit.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 49ms (Views: 37.8ms | ActiveRecord: 0.6ms)
+
+
+Started PATCH "/tweets/confirm" for ::1 at 2019-09-26 23:44:51 +0900
+Processing by TweetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vFxMX5fdIj3a7OnanjSCntpk2xjwY091HCkBKeF44Fv7qV9Z3wP5YrQo/C03qK0SHbvW8Vo1tzMiVwSlnv9APQ==", "tweet"=>{"content"=>"今日も一日頑張ったぞ!"}, "commit"=>"Tweetする", "id"=>"confirm"}
+  [1m[36mTweet Load (0.5ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" WHERE "tweets"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:46
+Completed 404 Not Found in 3ms (ActiveRecord: 0.5ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Tweet with 'id'=confirm):
+  
+app/controllers/tweets_controller.rb:46:in `set_tweet'
+Started GET "/tweets" for ::1 at 2019-09-26 23:45:09 +0900
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.4ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/views/tweets/index.html.erb:8
+  Rendered tweets/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 52ms (Views: 47.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tweets/2/edit" for ::1 at 2019-09-26 23:45:10 +0900
+Processing by TweetsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" WHERE "tweets"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:46
+  Rendering tweets/edit.html.erb within layouts/application
+  Rendered tweets/_form.html.erb (3.2ms)
+  Rendered tweets/edit.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 38ms (Views: 34.6ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/tweets/confirm" for ::1 at 2019-09-26 23:45:14 +0900
+Processing by TweetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LtF2s1y0zwQpg9uZU6zt8JgiI7TyY3fOvkP7FpTw8eZpJGW1FGoUW0dHzm76MMJ8X/0uXVg1j4iAPf6a63dRgA==", "tweet"=>{"content"=>"Hello world!"}, "commit"=>"Tweetする", "id"=>"confirm"}
+  [1m[36mTweet Load (0.4ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" WHERE "tweets"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:46
+Completed 404 Not Found in 2ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Tweet with 'id'=confirm):
+  
+app/controllers/tweets_controller.rb:46:in `set_tweet'
+Started GET "/tweets/" for ::1 at 2019-09-27 10:19:03 +0900
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/nishiotetsurou/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.4ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/views/tweets/index.html.erb:8
+  Rendered tweets/index.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 200ms (Views: 174.2ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/tweets/14/edit" for ::1 at 2019-09-27 10:19:07 +0900
+Processing by TweetsController#edit as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mTweet Load (0.2ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" WHERE "tweets"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:46
+  Rendering tweets/edit.html.erb within layouts/application
+  Rendered tweets/_form.html.erb (5.9ms)
+  Rendered tweets/edit.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 31ms (Views: 23.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/tweets" for ::1 at 2019-09-27 10:19:09 +0900
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.7ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/views/tweets/index.html.erb:8
+  Rendered tweets/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 29ms (Views: 23.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/tweets/15/edit" for ::1 at 2019-09-27 10:19:11 +0900
+Processing by TweetsController#edit as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" WHERE "tweets"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:46
+  Rendering tweets/edit.html.erb within layouts/application
+  Rendered tweets/_form.html.erb (0.9ms)
+  Rendered tweets/edit.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 28ms (Views: 25.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tweets/new" for ::1 at 2019-09-27 10:19:19 +0900
+Processing by TweetsController#new as HTML
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/_form.html.erb (1.0ms)
+  Rendered tweets/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 27ms (Views: 22.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tweets/confirm" for ::1 at 2019-09-27 10:19:27 +0900
+Processing by TweetsController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"A5sqQyyY2U5/RohfWeO2JBV2nwI0ohZQ1FQhxVClJ92/FLB4yE/5u49wbhLrErjn15QrWmcHBFPfusrjUKjuog==", "tweet"=>{"content"=>"お疲れ様でした"}, "commit"=>"Tweetする"}
+  Rendering tweets/confirm.html.erb within layouts/application
+  Rendered tweets/confirm.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 19ms (Views: 15.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tweets/new" for ::1 at 2019-09-27 10:19:29 +0900
+Processing by TweetsController#new as HTML
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/_form.html.erb (1.9ms)
+  Rendered tweets/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 49ms (Views: 44.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tweets" for ::1 at 2019-09-27 10:30:18 +0900
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/nishiotetsurou/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.5ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/views/tweets/index.html.erb:8
+  Rendered tweets/index.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 217ms (Views: 193.5ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/tweets/new" for ::1 at 2019-09-27 10:30:19 +0900
+Processing by TweetsController#new as HTML
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/_form.html.erb (8.4ms)
+  Rendered tweets/new.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 44ms (Views: 39.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tweets/confirm" for ::1 at 2019-09-27 10:30:28 +0900
+Processing by TweetsController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RpOjO47x7knnaIVEY7GQPuvnOzocoSdzUnUxt6X79jL6HDkAaibOvBdeYwnRQJ79KQWPYk8ENXBZm9qRpfY/TQ==", "tweet"=>{"content"=>"12345"}, "commit"=>"Tweetする"}
+  Rendering tweets/confirm.html.erb within layouts/application
+  Rendered tweets/confirm.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 26ms (Views: 20.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tweets/new" for ::1 at 2019-09-27 10:30:31 +0900
+Processing by TweetsController#new as HTML
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/_form.html.erb (0.9ms)
+  Rendered tweets/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 26ms (Views: 23.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tweets/confirm" for ::1 at 2019-09-27 10:30:33 +0900
+Processing by TweetsController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"d4JYds9F3s2qrpYMLe4YBdtUXbxPMzYvc+Q2ADi2nXfLDcJNK5L+OFqYcEGfHxbGGbbp5ByWJCx4Ct0mOLtUCA==", "tweet"=>{"content"=>""}, "commit"=>"Tweetする"}
+  Rendering tweets/confirm.html.erb within layouts/application
+  Rendered tweets/confirm.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 22ms (Views: 19.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tweets/new" for ::1 at 2019-09-27 10:30:37 +0900
+Processing by TweetsController#new as HTML
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/_form.html.erb (0.9ms)
+  Rendered tweets/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 29ms (Views: 27.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tweets" for ::1 at 2019-09-27 10:30:40 +0900
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/views/tweets/index.html.erb:8
+  Rendered tweets/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 59ms (Views: 53.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tweets/new" for ::1 at 2019-09-27 10:31:07 +0900
+Processing by TweetsController#new as HTML
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/_form.html.erb (1.1ms)
+  Rendered tweets/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 32ms (Views: 29.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tweets/confirm" for ::1 at 2019-09-27 10:31:13 +0900
+Processing by TweetsController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rRsU3Xv/peUGrpO8h8H4i98hoaemm8+FBUF2z5NOad8RlI7mnyiFEPaYdfE1MPZIHcMV//U+3YYOr53pk0OgoA==", "tweet"=>{"content"=>"こんにちは"}, "commit"=>"Tweetする"}
+  Rendering tweets/confirm.html.erb within layouts/application
+  Rendered tweets/confirm.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 24ms (Views: 20.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tweets/new" for ::1 at 2019-09-27 10:31:20 +0900
+Processing by TweetsController#new as HTML
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/_form.html.erb (3.6ms)
+  Rendered tweets/new.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 39ms (Views: 36.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tweets" for ::1 at 2019-09-27 10:36:45 +0900
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/nishiotetsurou/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.5ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/views/tweets/index.html.erb:8
+  Rendered tweets/index.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 224ms (Views: 201.2ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/tweets/new" for ::1 at 2019-09-27 10:36:49 +0900
+Processing by TweetsController#new as HTML
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/_form.html.erb (5.3ms)
+  Rendered tweets/new.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 29ms (Views: 23.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tweets/confirm" for ::1 at 2019-09-27 10:36:54 +0900
+Processing by TweetsController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"suU6WCXZQg+oXkcK5ohJmidUNutP9MKXwV+NrGQsyTUOaqBjwQ5i+lhooUdUeUdZ5baCsxxR0JTKsWaKZCEASg==", "tweet"=>{"content"=>"Hello world!"}, "commit"=>"Tweetする"}
+  Rendering tweets/confirm.html.erb within layouts/application
+  Rendered tweets/confirm.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 19ms (Views: 16.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tweets" for ::1 at 2019-09-27 10:37:08 +0900
+Processing by TweetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"r4u2xmPJqCVpprZYbelB9ETUDOcSkbYbEjCy2CqkTnU+odMpjL1Eq9eKvzgmV78VBh40wNDu1b5SOZpjOCmcnQ==", "tweet"=>{"content"=>"Hello world!"}, "back"=>"戻る"}
+  [1m[35m (2.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:14
+  [1m[36mTweet Create (10.6ms)[0m  [1m[32mINSERT INTO "tweets" ("content") VALUES ($1) RETURNING "id"[0m  [["content", "Hello world!"]]
+  ↳ app/controllers/tweets_controller.rb:14
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:14
+Redirected to http://localhost:3000/tweets/new
+Completed 302 Found in 19ms (ActiveRecord: 15.5ms)
+
+
+Started GET "/tweets/new" for ::1 at 2019-09-27 10:37:08 +0900
+Processing by TweetsController#new as HTML
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/_form.html.erb (1.6ms)
+  Rendered tweets/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 25ms (Views: 23.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tweets/confirm" for ::1 at 2019-09-27 10:37:11 +0900
+Processing by TweetsController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Flv+3N/rO5SicbC9DhF+5T3THJ+Sqjxm7PJM0gELgWGHcZszMJ/XGhxdud1Fr4AEfxkkuFDVX8Os+2RpE4ZTiQ==", "tweet"=>{"content"=>""}, "commit"=>"Tweetする"}
+  Rendering tweets/confirm.html.erb within layouts/application
+  Rendered tweets/confirm.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 21ms (Views: 17.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tweets" for ::1 at 2019-09-27 10:37:13 +0900
+Processing by TweetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uCRyXMj/AYg9uqrwOO8mewR51x6FBEuFEZ+cL3lWcVYpDhezJ4vtBoOWo5BzUdiaRrPvOUd7KCBRlrSUa9ujvg==", "tweet"=>{"content"=>""}, "back"=>"戻る"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:14
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/tweets_controller.rb:14
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/_form.html.erb (1.8ms)
+  Rendered tweets/new.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 28ms (Views: 21.6ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/tweets/confirm" for ::1 at 2019-09-27 10:37:23 +0900
+Processing by TweetsController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZYtLKDXag3XzFut5rAr+BWLJtEyVvvhPSwI8eJGEfRD0oS7H2q5v+0064hnntADkIAOMa1fBm+oLCxTDgwmv+A==", "tweet"=>{"content"=>"Hello world!"}, "commit"=>"Tweetする"}
+  Rendering tweets/confirm.html.erb within layouts/application
+  Rendered tweets/confirm.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 49ms (Views: 43.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tweets" for ::1 at 2019-09-27 10:37:26 +0900
+Processing by TweetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7+8UQLSRhAPndUS//c46OjHPOCYRnXQpI65M3cpbhl1+xXGvW+VojVlZTd+2cMTbcwUAAdPiF4xjp2Rm2NZUtQ==", "tweet"=>{"content"=>"Hello world!"}, "back"=>"戻る"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:14
+  [1m[36mTweet Create (0.3ms)[0m  [1m[32mINSERT INTO "tweets" ("content") VALUES ($1) RETURNING "id"[0m  [["content", "Hello world!"]]
+  ↳ app/controllers/tweets_controller.rb:14
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:14
+Redirected to http://localhost:3000/tweets/new
+Completed 302 Found in 6ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/tweets/new" for ::1 at 2019-09-27 10:37:26 +0900
+Processing by TweetsController#new as HTML
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/_form.html.erb (1.2ms)
+  Rendered tweets/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 23ms (Views: 20.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tweets/confirm" for ::1 at 2019-09-27 10:37:34 +0900
+Processing by TweetsController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Xd1gQIOb3A8qUDudKMl/N7AfNefY0XcU7lVq2mmrEibM9wWvbO8wgZR8Mv1jd4HW8tUNwBquFLGuXEJheybAzg==", "tweet"=>{"content"=>"Good Morning"}, "commit"=>"Tweetする"}
+  Rendering tweets/confirm.html.erb within layouts/application
+  Rendered tweets/confirm.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 22ms (Views: 19.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tweets" for ::1 at 2019-09-27 10:37:36 +0900
+Processing by TweetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cXHrjLKVp62YhgRssdPbQLhu4vcZnLyOkJ+EVs7CUSXgW45jXeFLIyaqDQz6bSWh+qTa0Nvj3yvQlqzt3E+DzQ==", "tweet"=>{"content"=>"Good Morning"}, "commit"=>"Tweetを送信"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:14
+  [1m[36mTweet Create (0.3ms)[0m  [1m[32mINSERT INTO "tweets" ("content") VALUES ($1) RETURNING "id"[0m  [["content", "Good Morning"]]
+  ↳ app/controllers/tweets_controller.rb:14
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:14
+Redirected to http://localhost:3000/tweets/new
+Completed 302 Found in 5ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/tweets/new" for ::1 at 2019-09-27 10:37:36 +0900
+Processing by TweetsController#new as HTML
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/_form.html.erb (1.0ms)
+  Rendered tweets/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 23ms (Views: 20.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tweets" for ::1 at 2019-09-27 10:37:47 +0900
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (9.8ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/views/tweets/index.html.erb:8
+  Rendered tweets/index.html.erb within layouts/application (14.8ms)
+Completed 200 OK in 50ms (Views: 35.4ms | ActiveRecord: 9.8ms)
+
+
+Started GET "/tweets/new" for ::1 at 2019-09-27 10:37:49 +0900
+Processing by TweetsController#new as HTML
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/_form.html.erb (2.5ms)
+  Rendered tweets/new.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 40ms (Views: 36.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tweets/confirm" for ::1 at 2019-09-27 10:37:53 +0900
+Processing by TweetsController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"io8nldvlVmvIK9mnVCIcZjVTNrYxyCj4WF78BSonW6Y2AL2uPzJ2njgdP+rm0xKl97GC7mJtOvtTsBcjKiqS2Q==", "tweet"=>{"content"=>"Hello world!"}, "commit"=>"Tweetする"}
+  Rendering tweets/confirm.html.erb within layouts/application
+  Rendered tweets/confirm.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 24ms (Views: 20.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tweets" for ::1 at 2019-09-27 10:37:55 +0900
+Processing by TweetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jGKmUkQlUZM/OJbk/8gYSFS3RddIGfhQi99rTAC0aDkdSMO9q1G9HYEUn4S0duapFn198Ipmm/XL1kP3Ejm60Q==", "tweet"=>{"content"=>"Hello world!"}, "commit"=>"Tweetを送信"}
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:14
+  [1m[36mTweet Create (0.3ms)[0m  [1m[32mINSERT INTO "tweets" ("content") VALUES ($1) RETURNING "id"[0m  [["content", "Hello world!"]]
+  ↳ app/controllers/tweets_controller.rb:14
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:14
+Redirected to http://localhost:3000/tweets/new
+Completed 302 Found in 5ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/tweets/new" for ::1 at 2019-09-27 10:37:55 +0900
+Processing by TweetsController#new as HTML
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/_form.html.erb (1.1ms)
+  Rendered tweets/new.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 27ms (Views: 23.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tweets" for ::1 at 2019-09-27 10:37:58 +0900
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.6ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/views/tweets/index.html.erb:8
+  Rendered tweets/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 35ms (Views: 29.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/tweets" for ::1 at 2019-09-27 10:59:33 +0900
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/nishiotetsurou/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.5ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/views/tweets/index.html.erb:8
+  Rendered tweets/index.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 222ms (Views: 196.6ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/tweets/16/edit" for ::1 at 2019-09-27 11:00:23 +0900
+Processing by TweetsController#edit as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mTweet Load (0.2ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" WHERE "tweets"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:46
+  Rendering tweets/edit.html.erb within layouts/application
+  Rendered tweets/_form.html.erb (5.4ms)
+  Rendered tweets/edit.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 43ms (Views: 28.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tweets" for ::1 at 2019-09-27 11:00:28 +0900
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.5ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/views/tweets/index.html.erb:8
+  Rendered tweets/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 35ms (Views: 29.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/tweets/new" for ::1 at 2019-09-27 11:00:30 +0900
+Processing by TweetsController#new as HTML
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/_form.html.erb (2.3ms)
+  Rendered tweets/new.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 29ms (Views: 25.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tweets/confirm" for ::1 at 2019-09-27 11:00:37 +0900
+Processing by TweetsController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"a0Ii1haTjfWTc4a7sc30h7Gf4RJChGqHvJzeYpJj0YjXzbjt8kStAGNFYPYDPPpEc31VShEheIS3cjVEkm4Y9w==", "tweet"=>{"content"=>"おはようございます"}, "commit"=>"Tweetする"}
+  Rendering tweets/confirm.html.erb within layouts/application
+  Rendered tweets/confirm.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 22ms (Views: 18.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tweets" for ::1 at 2019-09-27 11:00:40 +0900
+Processing by TweetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"v8mc4kqi16i7zioCBN54Ky6QLeCI/wYZZQDW+vQqimIu4/kNpdY7JgXiI2JPYIbKbFoVx0qAZbwlCf5B5qdYig==", "tweet"=>{"content"=>"おはようございます"}, "back"=>"戻る"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:14
+  [1m[36mTweet Create (0.7ms)[0m  [1m[32mINSERT INTO "tweets" ("content") VALUES ($1) RETURNING "id"[0m  [["content", "おはようございます"]]
+  ↳ app/controllers/tweets_controller.rb:14
+  [1m[35m (2.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:14
+Redirected to http://localhost:3000/tweets/new
+Completed 302 Found in 8ms (ActiveRecord: 3.9ms)
+
+
+Started GET "/tweets/new" for ::1 at 2019-09-27 11:00:40 +0900
+Processing by TweetsController#new as HTML
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/_form.html.erb (1.2ms)
+  Rendered tweets/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 20ms (Views: 17.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tweets/confirm" for ::1 at 2019-09-27 11:00:46 +0900
+Processing by TweetsController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3weoujMzFDN+0vnCLjUgutgkybQXAZ+lCFszsxtUVdJOLc1V3Ef4vcD+8KJli95bmu7xk9V+/ABIUhsICdmHOg==", "tweet"=>{"content"=>"こんにちは"}, "commit"=>"Tweetする"}
+  Rendering tweets/confirm.html.erb within layouts/application
+  Rendered tweets/confirm.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 38ms (Views: 34.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tweets/confirm" for ::1 at 2019-09-27 11:04:59 +0900
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/nishiotetsurou/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by TweetsController#show as HTML
+  Parameters: {"id"=>"confirm"}
+  [1m[36mTweet Load (0.6ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" WHERE "tweets"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:50
+Completed 404 Not Found in 27ms (ActiveRecord: 4.7ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Tweet with 'id'=confirm):
+  
+app/controllers/tweets_controller.rb:50:in `set_tweet'
+Started GET "/tweets/" for ::1 at 2019-09-27 11:05:05 +0900
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/views/tweets/index.html.erb:8
+  Rendered tweets/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 230ms (Views: 226.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tweets/new" for ::1 at 2019-09-27 11:05:08 +0900
+Processing by TweetsController#new as HTML
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/_form.html.erb (6.2ms)
+  Rendered tweets/new.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 36ms (Views: 31.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tweets/confirm" for ::1 at 2019-09-27 11:05:12 +0900
+Processing by TweetsController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oiXnn0O4m5rY1dyeAwcoZ7AGevcpSW6lyEPRPgaz3rgeqn2kp2+7byjjOtOx9iakcuTOr3rsfKbDrToYBr4Xxw==", "tweet"=>{"content"=>"こんにちは"}, "commit"=>"Tweetする"}
+  Rendering tweets/confirm.html.erb within layouts/application
+  Rendered tweets/confirm.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 21ms (Views: 17.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tweets" for ::1 at 2019-09-27 11:05:13 +0900
+Processing by TweetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Z3H1qIHLEIjzfVGUm0/uOysp2Qow/RpVPsarmDehCT72W5BHbr/8Bk1RWPTQ8RDaaePhLfKCefB+z4MjJSzb1g==", "tweet"=>{"content"=>"こんにちは"}, "back"=>"戻る"}
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/_form.html.erb (0.9ms)
+  Rendered tweets/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 21ms (Views: 20.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tweets/confirm" for ::1 at 2019-09-27 11:05:16 +0900
+Processing by TweetsController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dpAB+xINozCtUmygdSwP+x2/bZ/qTvboFv7VyGaezfHnumQU/XlPvhN+ZcA+kvEaX3VVuCgxlU1W9/1zdBMfGQ==", "tweet"=>{"content"=>"こんにちは"}, "commit"=>"Tweetする"}
+  Rendering tweets/confirm.html.erb within layouts/application
+  Rendered tweets/confirm.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 22ms (Views: 19.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tweets" for ::1 at 2019-09-27 11:05:17 +0900
+Processing by TweetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UmHz7dpu1ZxY/4+9FN3Yvcjhrx5f+YhZNokWjFjwHUXDS5YCNRo5EubTht1fYyZciiuXOZ2G6/x2gD43Sn3PrQ==", "tweet"=>{"content"=>"こんにちは"}, "back"=>"戻る"}
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/_form.html.erb (1.0ms)
+  Rendered tweets/new.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 22ms (Views: 20.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tweets" for ::1 at 2019-09-27 11:05:43 +0900
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.4ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/views/tweets/index.html.erb:8
+  Rendered tweets/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 26ms (Views: 22.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tweets/new" for ::1 at 2019-09-27 11:05:44 +0900
+Processing by TweetsController#new as HTML
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/_form.html.erb (0.8ms)
+  Rendered tweets/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 33ms (Views: 30.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tweets/confirm" for ::1 at 2019-09-27 11:05:51 +0900
+Processing by TweetsController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"52bCGtaQqHZ3Cf6Z4AytU8kbyko7XaXgGwboq/DHAg1b6VghMkeIg4c/GNRS/aOQC/l+Emj4t+MQ6AON8MrLcg==", "tweet"=>{"content"=>"Good Morning!"}, "commit"=>"Tweetする"}
+  Rendering tweets/confirm.html.erb within layouts/application
+  Rendered tweets/confirm.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 32ms (Views: 28.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tweets" for ::1 at 2019-09-27 11:05:54 +0900
+Processing by TweetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tQaFob8hUwx6GnrgCYGhCPjwpk5nEhFl/QZpZ1O136skLOBOUFW/gsQ2c4BCP1/pujqeaaVtcsC9D0HcQTgNQw==", "tweet"=>{"content"=>"Good Morning!"}, "commit"=>"Tweetを送信"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:17
+  [1m[36mTweet Create (1.4ms)[0m  [1m[32mINSERT INTO "tweets" ("content") VALUES ($1) RETURNING "id"[0m  [["content", "Good Morning!"]]
+  ↳ app/controllers/tweets_controller.rb:17
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:17
+Redirected to http://localhost:3000/tweets/new
+Completed 302 Found in 6ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/tweets/new" for ::1 at 2019-09-27 11:05:54 +0900
+Processing by TweetsController#new as HTML
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/_form.html.erb (0.9ms)
+  Rendered tweets/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 21ms (Views: 18.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tweets/confirm" for ::1 at 2019-09-27 11:06:06 +0900
+Processing by TweetsController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2VsB7jXy/BpvoxGegJfrhCQOqnaVDoVtMoC/NH1NXj5IcWQB2oYQlNGPGP7LKRVlZsSSUVdx5shyiZePb8CM1g==", "tweet"=>{"content"=>"おはようございます!"}, "commit"=>"Tweetする"}
+  Rendering tweets/confirm.html.erb within layouts/application
+  Rendered tweets/confirm.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 24ms (Views: 20.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tweets" for ::1 at 2019-09-27 11:06:09 +0900
+Processing by TweetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2GxT8clYOnfqnenAUK2z2xUPnlNzMZyiG8J+n5T/OAhJRjYeJizW+VSx4KAbE006V8WmdLFO/wdby1YkhnLq4A==", "tweet"=>{"content"=>"おはようございます!"}, "back"=>"戻る"}
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/_form.html.erb (1.1ms)
+  Rendered tweets/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 23ms (Views: 22.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tweets/confirm" for ::1 at 2019-09-27 11:06:10 +0900
+Processing by TweetsController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WMgC80WTk+Gg7LZToaO+goLOo1ZuuvA4snrWFcLF+BjJ4mccqud/bx7AvzPqHUBjwASbcazFk53yc/6u0Egq8A==", "tweet"=>{"content"=>"おはようございます!"}, "commit"=>"Tweetする"}
+  Rendering tweets/confirm.html.erb within layouts/application
+  Rendered tweets/confirm.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 21ms (Views: 18.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tweets" for ::1 at 2019-09-27 11:06:12 +0900
+Processing by TweetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MnA+OFExlwM4OwRY8GnwNapor/cyb4LeIFJQPmGiPhSjWlvXvkV7jYYXDTi71w7U6KKX0PAQ4XtgW3iFcy/s/A==", "tweet"=>{"content"=>"おはようございます!"}, "back"=>"戻る"}
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/_form.html.erb (0.9ms)
+  Rendered tweets/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 23ms (Views: 22.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tweets/confirm" for ::1 at 2019-09-27 11:06:14 +0900
+Processing by TweetsController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"psBbMDo1fBigGMMrxImJHAyzaCS1szy+J0YvDI2NBMs36j7f1UGQlh40ykuPN3f9TnlQA3fMXxtnTwe3nwDWIw==", "tweet"=>{"content"=>"おはようございます!"}, "commit"=>"Tweetする"}
+  Rendering tweets/confirm.html.erb within layouts/application
+  Rendered tweets/confirm.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 24ms (Views: 19.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tweets" for ::1 at 2019-09-27 11:06:16 +0900
+Processing by TweetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"omU4JIunH5OVMuNlblQ+CF1UBrLL4XEvKweFAR1+N8EzT13LZNPzHSse6gUl6sDpH54+lQmeEoprDq26D/PlKQ==", "tweet"=>{"content"=>"おはようございます!"}, "commit"=>"Tweetを送信"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:17
+  [1m[36mTweet Create (0.5ms)[0m  [1m[32mINSERT INTO "tweets" ("content") VALUES ($1) RETURNING "id"[0m  [["content", "おはようございます!"]]
+  ↳ app/controllers/tweets_controller.rb:17
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:17
+Redirected to http://localhost:3000/tweets/new
+Completed 302 Found in 5ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/tweets/new" for ::1 at 2019-09-27 11:06:16 +0900
+Processing by TweetsController#new as HTML
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/_form.html.erb (1.1ms)
+  Rendered tweets/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 20ms (Views: 18.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tweets" for ::1 at 2019-09-27 11:06:12 +0900
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.4ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/views/tweets/index.html.erb:8
+  Rendered tweets/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 30ms (Views: 25.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tweets" for ::1 at 2019-09-27 11:08:13 +0900
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/nishiotetsurou/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.5ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/views/tweets/index.html.erb:8
+  Rendered tweets/index.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 216ms (Views: 193.8ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/tweets/new" for ::1 at 2019-09-27 11:08:15 +0900
+Processing by TweetsController#new as HTML
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/_form.html.erb (7.7ms)
+  Rendered tweets/new.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 48ms (Views: 43.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tweets/confirm" for ::1 at 2019-09-27 11:08:21 +0900
+Processing by TweetsController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nQeaUxwU10GtFsYwFNP/8Sa9kqivg6IOlmhTrCjdSlUhiABo+MP3tF0gIH2mIvEy5F8m8PwmsA2dhriKKNCDKg==", "tweet"=>{"content"=>"こんにちは"}, "commit"=>"Tweetする"}
+  Rendering tweets/confirm.html.erb within layouts/application
+  Rendered tweets/confirm.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 24ms (Views: 19.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tweets" for ::1 at 2019-09-27 11:08:25 +0900
+Processing by TweetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0tbcy8AQtfgb5nmBDGLKcWfPMdjq3HrvmHk82PnCRyRD/LkkL2RZdqXKcOFH3DSQJQUJ/yijGUrYcBRj60+VzA==", "tweet"=>{"content"=>"こんにちは"}, "back"=>"戻る"}
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/_form.html.erb (1.6ms)
+  Rendered tweets/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 22ms (Views: 21.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tweets/confirm" for ::1 at 2019-09-27 11:08:27 +0900
+Processing by TweetsController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Iug5YvX1rrlbayteu4YMJSDi4lhl279HoNc5JqQ5XQezwlyNGoFCN+VHIj7wOPLEYijaf6ek3OLg3hGdtrSP7w==", "tweet"=>{"content"=>"こんにちは"}, "commit"=>"Tweetする"}
+  Rendering tweets/confirm.html.erb within layouts/application
+  Rendered tweets/confirm.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 22ms (Views: 19.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tweets" for ::1 at 2019-09-27 11:08:28 +0900
+Processing by TweetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aNsJNj4DX8fw3kK77Rrg5KmZIxXfe+W0V4KQGM0eeSD58WzZ0XezSU7yS9umpB4F61MbMh0EhhEXi7ij35OryA==", "tweet"=>{"content"=>"こんにちは"}, "back"=>"戻る"}
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/_form.html.erb (1.2ms)
+  Rendered tweets/new.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 25ms (Views: 23.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tweets" for ::1 at 2019-09-27 11:08:30 +0900
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.4ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/views/tweets/index.html.erb:8
+  Rendered tweets/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 46ms (Views: 42.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tweets/22/edit" for ::1 at 2019-09-27 11:08:34 +0900
+Processing by TweetsController#edit as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mTweet Load (0.4ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" WHERE "tweets"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:50
+  Rendering tweets/edit.html.erb within layouts/application
+  Rendered tweets/_form.html.erb (1.3ms)
+  Rendered tweets/edit.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 40ms (Views: 29.7ms | ActiveRecord: 0.7ms)
+
+
+Started PATCH "/tweets/confirm" for ::1 at 2019-09-27 11:08:35 +0900
+Processing by TweetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Fo1f67bu4yeCZ1THnEl6Uyrh2+J/Pc5kDUupF2kqQhZReEzt/jA4eOyjQTA11VXf7T7WC9VrNiIzNaybFq3icA==", "tweet"=>{"content"=>"おはようございます!"}, "commit"=>"Tweetする", "id"=>"confirm"}
+  [1m[36mTweet Load (0.4ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" WHERE "tweets"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:50
+Completed 404 Not Found in 2ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Tweet with 'id'=confirm):
+  
+app/controllers/tweets_controller.rb:50:in `set_tweet'
+Started PATCH "/tweets/confirm" for ::1 at 2019-09-27 11:08:47 +0900
+Processing by TweetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"89Fr6AvwoBqCIDlw+tp7BgKnx6zZUqPbv3JV05YmOLBi+w4H5IRMlDwMMBCxZIXnQG3/ixstwH7/e31ohKvqWA==", "tweet"=>{"content"=>"おはようございます!"}, "commit"=>"Tweetする", "id"=>"confirm"}
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" WHERE "tweets"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:50
+Completed 404 Not Found in 3ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Tweet with 'id'=confirm):
+  
+app/controllers/tweets_controller.rb:50:in `set_tweet'
+Started PATCH "/tweets/confirm" for ::1 at 2019-09-27 11:08:57 +0900
+Processing by TweetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"89Fr6AvwoBqCIDlw+tp7BgKnx6zZUqPbv3JV05YmOLBi+w4H5IRMlDwMMBCxZIXnQG3/ixstwH7/e31ohKvqWA==", "tweet"=>{"content"=>"おはようございます!"}, "commit"=>"Tweetする", "id"=>"confirm"}
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" WHERE "tweets"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:50
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Tweet with 'id'=confirm):
+  
+app/controllers/tweets_controller.rb:50:in `set_tweet'
+Started GET "/tweets/" for ::1 at 2019-09-27 11:10:36 +0900
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/nishiotetsurou/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.8ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/views/tweets/index.html.erb:8
+  Rendered tweets/index.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 213ms (Views: 188.1ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/tweets/17/edit" for ::1 at 2019-09-27 11:10:39 +0900
+Processing by TweetsController#edit as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mTweet Load (0.2ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" WHERE "tweets"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:50
+  Rendering tweets/edit.html.erb within layouts/application
+  Rendered tweets/_form.html.erb (9.6ms)
+  Rendered tweets/edit.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 42ms (Views: 36.0ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/tweets/confirm" for ::1 at 2019-09-27 11:10:45 +0900
+Processing by TweetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uAOiJxViSGFu+mAayXghKMbbM4PzbQl9XCzTuMCcxLP/9rEhXbyTPgA+de1g5A6kAQQ+alk78TtiUtY0vxtk1Q==", "tweet"=>{"content"=>"Hello world!!!"}, "commit"=>"Tweetする", "id"=>"confirm"}
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" WHERE "tweets"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:50
+Completed 404 Not Found in 3ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Tweet with 'id'=confirm):
+  
+app/controllers/tweets_controller.rb:50:in `set_tweet'
+Started GET "/tweets/" for ::1 at 2019-09-27 11:12:18 +0900
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/nishiotetsurou/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.7ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/views/tweets/index.html.erb:8
+  Rendered tweets/index.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 188ms (Views: 164.9ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/tweets/15/edit" for ::1 at 2019-09-27 11:12:21 +0900
+Processing by TweetsController#edit as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mTweet Load (0.2ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" WHERE "tweets"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:50
+  Rendering tweets/edit.html.erb within layouts/application
+  Rendered tweets/_form.html.erb (5.8ms)
+  Rendered tweets/edit.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 41ms (Views: 31.5ms | ActiveRecord: 1.7ms)
+
+
+Started PATCH "/tweets/confirm" for ::1 at 2019-09-27 11:12:26 +0900
+Processing by TweetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PSY9YXjiiRQopaKN4Pp4TWaDkBlr7BCG+v8bNDTfzWl60y5nMDxSS0Zht3pJZlfBoVyd8MG66MDEgR64S1htDw==", "tweet"=>{"content"=>"今日も一日頑張ったぞ!"}, "commit"=>"Tweetする", "id"=>"confirm"}
+  [1m[36mTweet Load (0.2ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" WHERE "tweets"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:50
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Tweet with 'id'=confirm):
+  
+app/controllers/tweets_controller.rb:50:in `set_tweet'
+Started PATCH "/tweets/confirm" for ::1 at 2019-09-27 11:26:45 +0900
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/nishiotetsurou/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by TweetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WIBNOeIznD0iKvnvup/Fy0KdK0hTSTz7HyWMI7cG+erJqijWDUdws5wG8I/xITsqAFcTb5E2X15fLKSYpYsrAg==", "tweet"=>{"content"=>"今日も一日頑張ったぞ!!"}, "commit"=>"Tweetする", "id"=>"confirm"}
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" WHERE "tweets"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:50
+Completed 404 Not Found in 16ms (ActiveRecord: 3.9ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Tweet with 'id'=confirm):
+  
+app/controllers/tweets_controller.rb:50:in `set_tweet'
+Started PATCH "/tweets/confirm" for ::1 at 2019-09-27 11:26:53 +0900
+Processing by TweetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WIBNOeIznD0iKvnvup/Fy0KdK0hTSTz7HyWMI7cG+erJqijWDUdws5wG8I/xITsqAFcTb5E2X15fLKSYpYsrAg==", "tweet"=>{"content"=>"今日も一日頑張ったぞ!!"}, "commit"=>"Tweetする", "id"=>"confirm"}
+  [1m[36mTweet Load (0.6ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" WHERE "tweets"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:50
+Completed 404 Not Found in 2ms (ActiveRecord: 0.6ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Tweet with 'id'=confirm):
+  
+app/controllers/tweets_controller.rb:50:in `set_tweet'
+Started GET "/tweets/" for ::1 at 2019-09-27 11:29:23 +0900
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/nishiotetsurou/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.4ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/views/tweets/index.html.erb:8
+  Rendered tweets/index.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 217ms (Views: 192.6ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/tweets/14/edit" for ::1 at 2019-09-27 11:29:26 +0900
+Processing by TweetsController#edit as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mTweet Load (0.2ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" WHERE "tweets"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:50
+  Rendering tweets/edit.html.erb within layouts/application
+  Rendered tweets/_form.html.erb (7.5ms)
+  Rendered tweets/edit.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 41ms (Views: 33.7ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/tweets/confirm" for ::1 at 2019-09-27 11:29:31 +0900
+Processing by TweetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lkH2pr1+GOqOlRqnCrSrU/HgkLi8gfurtPk9Wcj1mTbRtOWg9aDDteBRD1CjKITfNj+dURbXA+2KhzjVt3I5UA==", "tweet"=>{"content"=>"こんにちは!"}, "commit"=>"Tweetする", "id"=>"confirm"}
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" WHERE "tweets"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:50
+Completed 404 Not Found in 3ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Tweet with 'id'=confirm):
+  
+app/controllers/tweets_controller.rb:50:in `set_tweet'
+Started GET "/tweets/" for ::1 at 2019-09-27 11:33:34 +0900
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/nishiotetsurou/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.6ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/views/tweets/index.html.erb:8
+  Rendered tweets/index.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 194ms (Views: 171.3ms | ActiveRecord: 3.7ms)
+
+
+Started DELETE "/tweets/22" for ::1 at 2019-09-27 11:33:39 +0900
+Processing by TweetsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"nWdsPQg9Ts/W6PQ66KFhonxPOhPS+5Y/xc1e/JT8bhsMTQnS50miQWjE/VqjH59DPoUCNBCE9ZqFxHZHhnG88w==", "id"=>"22"}
+  [1m[36mTweet Load (0.2ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" WHERE "tweets"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:50
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:40
+  [1m[36mTweet Destroy (4.5ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 22]]
+  ↳ app/controllers/tweets_controller.rb:40
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:40
+Redirected to http://localhost:3000/tweets
+Completed 302 Found in 12ms (ActiveRecord: 6.7ms)
+
+
+Started GET "/tweets" for ::1 at 2019-09-27 11:33:39 +0900
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.5ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/views/tweets/index.html.erb:8
+  Rendered tweets/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 25ms (Views: 21.6ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/tweets/21" for ::1 at 2019-09-27 11:33:42 +0900
+Processing by TweetsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"pFAD7IGH8peZ81wiy2WOmvX7cKyV44rqkkZkIVsS+hU1emYDbvMeGSffVUKA23B7tzFIi1ec6U/ST0yaSZ8o/Q==", "id"=>"21"}
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" WHERE "tweets"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:50
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:40
+  [1m[36mTweet Destroy (0.3ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 21]]
+  ↳ app/controllers/tweets_controller.rb:40
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:40
+Redirected to http://localhost:3000/tweets
+Completed 302 Found in 4ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/tweets" for ::1 at 2019-09-27 11:33:42 +0900
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.4ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/views/tweets/index.html.erb:8
+  Rendered tweets/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 29ms (Views: 26.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tweets/20/edit" for ::1 at 2019-09-27 11:38:47 +0900
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/nishiotetsurou/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by TweetsController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mTweet Load (0.5ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" WHERE "tweets"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:50
+  Rendering tweets/edit.html.erb within layouts/application
+  Rendered tweets/_form.html.erb (8.5ms)
+  Rendered tweets/edit.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 239ms (Views: 206.0ms | ActiveRecord: 12.2ms)
+
+
+Started PATCH "/tweets/20" for ::1 at 2019-09-27 11:38:50 +0900
+Processing by TweetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"l9HTjZFYkc1jcADg6HUi6wBaia5/B6lDOhSmddoj9vMnkU0VDFI/5Ibmzpz85KN99d1V3T533YZUpi2giNbZlA==", "tweet"=>{"content"=>"おはようございます."}, "commit"=>"Tweetする", "id"=>"20"}
+  [1m[36mTweet Load (0.5ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" WHERE "tweets"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:50
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:32
+  [1m[36mTweet Update (1.3ms)[0m  [1m[33mUPDATE "tweets" SET "content" = $1 WHERE "tweets"."id" = $2[0m  [["content", "おはようございます."], ["id", 20]]
+  ↳ app/controllers/tweets_controller.rb:32
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:32
+Redirected to http://localhost:3000/tweets
+Completed 302 Found in 8ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/tweets" for ::1 at 2019-09-27 11:38:50 +0900
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/views/tweets/index.html.erb:8
+  Rendered tweets/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 21ms (Views: 17.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tweets/20/edit" for ::1 at 2019-09-27 11:38:53 +0900
+Processing by TweetsController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mTweet Load (0.8ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" WHERE "tweets"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:50
+  Rendering tweets/edit.html.erb within layouts/application
+  Rendered tweets/_form.html.erb (2.2ms)
+  Rendered tweets/edit.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 30ms (Views: 24.5ms | ActiveRecord: 0.8ms)
+
+
+Started PATCH "/tweets/20" for ::1 at 2019-09-27 11:38:58 +0900
+Processing by TweetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5jpPFDzUqT0Vw+ZJkVCei+yJZTTdcehacROHHiIHqCdWetGMod4HFPBVKDWFwR8dGQ65R5wBnJ8foQzLcPKHQA==", "tweet"=>{"content"=>"おはようございます。"}, "commit"=>"Tweetする", "id"=>"20"}
+  [1m[36mTweet Load (0.4ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" WHERE "tweets"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:50
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:32
+  [1m[36mTweet Update (0.3ms)[0m  [1m[33mUPDATE "tweets" SET "content" = $1 WHERE "tweets"."id" = $2[0m  [["content", "おはようございます。"], ["id", 20]]
+  ↳ app/controllers/tweets_controller.rb:32
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:32
+Redirected to http://localhost:3000/tweets
+Completed 302 Found in 5ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/tweets" for ::1 at 2019-09-27 11:38:58 +0900
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.2ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/views/tweets/index.html.erb:8
+  Rendered tweets/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 21ms (Views: 18.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tweets/new" for ::1 at 2019-09-27 11:39:02 +0900
+Processing by TweetsController#new as HTML
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/_form.html.erb (1.2ms)
+  Rendered tweets/new.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 30ms (Views: 24.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tweets/confirm" for ::1 at 2019-09-27 11:39:07 +0900
+Processing by TweetsController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"figJYa59Y3DV2TvvVXJiOcQ6CNjaLl/pEicN7EVm0YnCp5NaSqpDhSXv3aLng2z6Bti8gImLTeoZyebKRWsY9g==", "tweet"=>{"content"=>"Good Morning"}, "commit"=>"Tweetする"}
+  Rendering tweets/confirm.html.erb within layouts/application
+  Rendered tweets/confirm.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 32ms (Views: 27.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tweets" for ::1 at 2019-09-27 11:39:08 +0900
+Processing by TweetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HFmIAWW75dV75qIDsAU/ScEC/l9o1dwbp99Vs5xhljaNc+3uis8JW8XKq2P7u8Gog8jGeKqqv77n1n0IjuxE3g==", "tweet"=>{"content"=>"Good Morning"}, "back"=>"戻る"}
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/_form.html.erb (1.6ms)
+  Rendered tweets/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 19ms (Views: 18.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tweets" for ::1 at 2019-09-27 11:39:09 +0900
+Processing by TweetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MZZniisF/ey8XxO0UFccxhyyNF6zeyKsWk2t/6d4ZT2gvAJlxHERYgJzGtQb6eInXngMeXEEQQkaRIVEtfW31Q==", "tweet"=>{"content"=>"Good Morning"}, "commit"=>"Tweetする"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:17
+  [1m[36mTweet Create (2.3ms)[0m  [1m[32mINSERT INTO "tweets" ("content") VALUES ($1) RETURNING "id"[0m  [["content", "Good Morning"]]
+  ↳ app/controllers/tweets_controller.rb:17
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:17
+Redirected to http://localhost:3000/tweets/new
+Completed 302 Found in 6ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/tweets/new" for ::1 at 2019-09-27 11:39:09 +0900
+Processing by TweetsController#new as HTML
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/_form.html.erb (0.9ms)
+  Rendered tweets/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 22ms (Views: 19.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tweets" for ::1 at 2019-09-27 11:39:11 +0900
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/views/tweets/index.html.erb:8
+  Rendered tweets/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 31ms (Views: 25.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tweets/new" for ::1 at 2019-09-27 11:40:15 +0900
+Processing by TweetsController#new as HTML
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/_form.html.erb (1.0ms)
+  Rendered tweets/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 35ms (Views: 32.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tweets/confirm" for ::1 at 2019-09-27 11:40:21 +0900
+Processing by TweetsController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Z7r1PFrwINpW6myW1isxddITs+TNyED16BossznL3TfbNW8HvicAL6bcittk2j+2EPEHvJ5tUvbj9MeVOcYUSA==", "tweet"=>{"content"=>"こんにちは"}, "commit"=>"Tweetする"}
+  Rendering tweets/confirm.html.erb within layouts/application
+  Rendered tweets/confirm.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 68ms (Views: 64.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tweets/confirm" for ::1 at 2019-09-27 11:56:11 +0900
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/nishiotetsurou/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by TweetsController#show as HTML
+  Parameters: {"id"=>"confirm"}
+  [1m[36mTweet Load (0.5ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" WHERE "tweets"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:51
+Completed 404 Not Found in 25ms (ActiveRecord: 4.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Tweet with 'id'=confirm):
+  
+app/controllers/tweets_controller.rb:51:in `set_tweet'
+Started GET "/tweets/" for ::1 at 2019-09-27 11:56:22 +0900
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/views/tweets/index.html.erb:8
+  Rendered tweets/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 280ms (Views: 274.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tweets/23/edit" for ::1 at 2019-09-27 11:56:25 +0900
+Processing by TweetsController#edit as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mTweet Load (0.5ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" WHERE "tweets"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:51
+  Rendering tweets/edit.html.erb within layouts/application
+  Rendered tweets/_form.html.erb (9.7ms)
+  Rendered tweets/edit.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 40ms (Views: 35.2ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/tweets/23" for ::1 at 2019-09-27 11:56:28 +0900
+Processing by TweetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JuceEKfIwWvU5hW9TCZVVUE7VIOUDNFjTEtwlVyksRbbeVBezImE7G62Pu8Cmk5htTKcX0mqYi8Ite35TkHkYQ==", "tweet"=>{"content"=>"Good Morning"}, "commit"=>"Tweetする", "id"=>"23"}
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" WHERE "tweets"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:32
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:32
+Redirected to http://localhost:3000/tweets
+Completed 302 Found in 4ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/tweets" for ::1 at 2019-09-27 11:56:28 +0900
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.4ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/views/tweets/index.html.erb:8
+  Rendered tweets/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 22ms (Views: 19.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tweets/new" for ::1 at 2019-09-27 11:56:32 +0900
+Processing by TweetsController#new as HTML
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/_form.html.erb (2.9ms)
+  Rendered tweets/new.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 33ms (Views: 28.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tweets/confirm" for ::1 at 2019-09-27 11:56:37 +0900
+Processing by TweetsController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Junrx4mXC7fWvzM8TXIQDU1tS9vLuVXszZc9nqpRtmKaZnH8bUArQiaJ1XH/gx7Oj4//g5gcR+/Geda4qlx/HQ==", "tweet"=>{"content"=>"アイウエオ"}, "commit"=>"Tweetする"}
+  Rendering tweets/confirm.html.erb within layouts/application
+  Rendered tweets/confirm.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 27ms (Views: 23.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tweets" for ::1 at 2019-09-27 11:56:39 +0900
+Processing by TweetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zez+78c4AyPWKZECbYSiMbp4Fn+DiSVmUKOabOZWSPBcxpsAKEzvrWgFmGImOlzQ+LIuWEH2RsMQqrLX9NuaGA==", "tweet"=>{"content"=>"アイウエオ"}, "commit"=>"Tweetを送信"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:17
+  [1m[36mTweet Create (0.7ms)[0m  [1m[32mINSERT INTO "tweets" ("content") VALUES ($1) RETURNING "id"[0m  [["content", "アイウエオ"]]
+  ↳ app/controllers/tweets_controller.rb:17
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:17
+Redirected to http://localhost:3000/tweets/new
+Completed 302 Found in 7ms (ActiveRecord: 3.3ms)
+
+
+Started GET "/tweets/new" for ::1 at 2019-09-27 11:56:39 +0900
+Processing by TweetsController#new as HTML
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/_form.html.erb (0.9ms)
+  Rendered tweets/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 21ms (Views: 18.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tweets/confirm" for ::1 at 2019-09-27 11:56:44 +0900
+Processing by TweetsController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"o6JyOU2CLdtlzH7JPlUc7kh4Fwdnk/aQAaVmVISXmB8yiBfWovbBVdvgd6l16+IPCrIvIKXslTVBrE7vlhpK9w==", "tweet"=>{"content"=>"かきくけこ"}, "commit"=>"Tweetする"}
+  Rendering tweets/confirm.html.erb within layouts/application
+  Rendered tweets/confirm.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 23ms (Views: 19.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tweets" for ::1 at 2019-09-27 11:56:46 +0900
+Processing by TweetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"v8pNDBxQXd8kckvigFwjMKrYxyu6UCq6iD4q5blMn9wu4Cjj8ySxUZpeQoLL4t3R6BL/DHgvSR/INwJeq8FNNA==", "tweet"=>{"content"=>"かきくけこ"}, "back"=>"戻る"}
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/_form.html.erb (1.6ms)
+  Rendered tweets/new.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 24ms (Views: 22.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tweets/confirm" for ::1 at 2019-09-27 11:56:49 +0900
+Processing by TweetsController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bs+l4Umt93BkBODILGX2SEbmVDhp20jadO67QtlOUJSX5cAOptkb/too6ahn2wipBCxsH6ukK38055P5y8OCfA==", "tweet"=>{"content"=>"かきくけこ！"}, "commit"=>"Tweetする"}
+  Rendering tweets/confirm.html.erb within layouts/application
+  Rendered tweets/confirm.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 31ms (Views: 28.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tweets" for ::1 at 2019-09-27 11:56:51 +0900
+Processing by TweetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"E8D59sDCwPFOGX717oupsoWMK7mInNcoTuqgFjuv/p6C6pwZL7Ysf/A1d5WlNVdTx0YTnkrjtI0O44itKSIsdg==", "tweet"=>{"content"=>"かきくけこ！"}, "commit"=>"Tweetを送信"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:17
+  [1m[36mTweet Create (0.2ms)[0m  [1m[32mINSERT INTO "tweets" ("content") VALUES ($1) RETURNING "id"[0m  [["content", "かきくけこ！"]]
+  ↳ app/controllers/tweets_controller.rb:17
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:17
+Redirected to http://localhost:3000/tweets/new
+Completed 302 Found in 5ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/tweets/new" for ::1 at 2019-09-27 11:56:51 +0900
+Processing by TweetsController#new as HTML
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/_form.html.erb (0.8ms)
+  Rendered tweets/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 21ms (Views: 18.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tweets/confirm" for ::1 at 2019-09-27 11:56:54 +0900
+Processing by TweetsController#show as HTML
+  Parameters: {"id"=>"confirm"}
+  [1m[36mTweet Load (0.4ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" WHERE "tweets"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:51
+Completed 404 Not Found in 2ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Tweet with 'id'=confirm):
+  
+app/controllers/tweets_controller.rb:51:in `set_tweet'
+Started GET "/tweets" for ::1 at 2019-09-27 11:56:54 +0900
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.5ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/views/tweets/index.html.erb:8
+  Rendered tweets/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 19ms (Views: 16.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/tweets/confirm" for ::1 at 2019-09-27 11:56:55 +0900
+Processing by TweetsController#show as HTML
+  Parameters: {"id"=>"confirm"}
+  [1m[36mTweet Load (0.2ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" WHERE "tweets"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:51
+Completed 404 Not Found in 2ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Tweet with 'id'=confirm):
+  
+app/controllers/tweets_controller.rb:51:in `set_tweet'
+Started GET "/tweets/confirm" for ::1 at 2019-09-27 11:57:06 +0900
+Processing by TweetsController#show as HTML
+  Parameters: {"id"=>"confirm"}
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" WHERE "tweets"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:51
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Tweet with 'id'=confirm):
+  
+app/controllers/tweets_controller.rb:51:in `set_tweet'
+Started POST "/tweets/confirm" for ::1 at 2019-09-27 11:57:11 +0900
+Processing by TweetsController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RfZa5Y1xRqrm7r1psyPd2fz7B1H2ETnN244XgMO8dPTU3D8KYgWqJFjCtAn4nSM4vjE/djRuWmibhz870TGmHA==", "tweet"=>{"content"=>"アイウエオ"}, "commit"=>"Tweetする"}
+  Rendering tweets/confirm.html.erb within layouts/application
+  Rendered tweets/confirm.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 23ms (Views: 20.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tweets" for ::1 at 2019-09-27 11:57:13 +0900
+Processing by TweetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IyLuxSpTvQg2EoZW4shIsIOsNYG2MqltW0XZncLXvpSyCIsqxSdRhog+jzapdrZRwWYNpnRNysgbTPEm0FpsfA==", "tweet"=>{"content"=>"アイウエオ"}, "commit"=>"Tweetを送信"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:17
+  [1m[36mTweet Create (0.5ms)[0m  [1m[32mINSERT INTO "tweets" ("content") VALUES ($1) RETURNING "id"[0m  [["content", "アイウエオ"]]
+  ↳ app/controllers/tweets_controller.rb:17
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:17
+Redirected to http://localhost:3000/tweets/new
+Completed 302 Found in 5ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/tweets/new" for ::1 at 2019-09-27 11:57:13 +0900
+Processing by TweetsController#new as HTML
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/_form.html.erb (1.1ms)
+  Rendered tweets/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 23ms (Views: 20.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tweets/confirm" for ::1 at 2019-09-27 11:57:15 +0900
+Processing by TweetsController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5UgkBGo7SgSVvSD9Tzb4RTWt3D25IiujK8IKujhkxYR0YkHrhU+miiuRKZ0EiAakd2fkGntdSAZryyIBKukXbA==", "tweet"=>{"content"=>""}, "commit"=>"Tweetする"}
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/_form.html.erb (1.2ms)
+  Rendered tweets/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 28ms (Views: 21.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tweets/confirm" for ::1 at 2019-09-27 11:57:17 +0900
+Processing by TweetsController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1n+E990MEBFrimzcTP9m0ImVxpUAsxZJA5NLs7yBSMxHVeEYMnj8n9WmZbwHQZgxy1/+ssLMdexDmmMIrgyaJA==", "tweet"=>{"content"=>""}, "commit"=>"Tweetする"}
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/_form.html.erb (1.1ms)
+  Rendered tweets/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 25ms (Views: 23.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tweets/confirm" for ::1 at 2019-09-27 11:57:21 +0900
+Processing by TweetsController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Tu74yuQ7yPBi9SBIXbaLBy+IDWBdZdmWqn71CFwnMD/fxJ0lC08kftzZKSgWCHXmbUI1R58aujPqd92zTqri1w==", "tweet"=>{"content"=>"こんにちは"}, "commit"=>"Tweetする"}
+  Rendering tweets/confirm.html.erb within layouts/application
+  Rendered tweets/confirm.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 30ms (Views: 27.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tweets" for ::1 at 2019-09-27 11:57:25 +0900
+Processing by TweetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WQOqoxEVWe4odk+prpV/J3W/dMeQuo9C4qAGlKLeRf7IKc9M/mG1YJZaRsnlK4HGN3VM4FLF7OeiqS4vsFOXFg==", "tweet"=>{"content"=>"こんにちは"}, "commit"=>"Tweetを送信"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:17
+  [1m[36mTweet Create (0.3ms)[0m  [1m[32mINSERT INTO "tweets" ("content") VALUES ($1) RETURNING "id"[0m  [["content", "こんにちは"]]
+  ↳ app/controllers/tweets_controller.rb:17
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:17
+Redirected to http://localhost:3000/tweets/new
+Completed 302 Found in 5ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/tweets/new" for ::1 at 2019-09-27 11:57:25 +0900
+Processing by TweetsController#new as HTML
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/_form.html.erb (1.1ms)
+  Rendered tweets/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 24ms (Views: 22.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tweets/confirm" for ::1 at 2019-09-27 11:57:26 +0900
+Processing by TweetsController#show as HTML
+  Parameters: {"id"=>"confirm"}
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" WHERE "tweets"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:51
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Tweet with 'id'=confirm):
+  
+app/controllers/tweets_controller.rb:51:in `set_tweet'
+Started POST "/tweets/confirm" for ::1 at 2019-09-27 11:59:53 +0900
+Processing by TweetsController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wQynNOsddRnc4m8WlqtC8w9ltklPWbNl0nWgJ5Dx6LxQJsLbBGmZl2LOZnbdFbwSTa+Obo0m0MCSfIicgnw6VA==", "tweet"=>{"content"=>"こんにちは"}, "commit"=>"Tweetする"}
+  Rendering tweets/confirm.html.erb within layouts/application
+  Rendered tweets/confirm.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 24ms (Views: 20.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tweets" for ::1 at 2019-09-27 11:59:57 +0900
+Processing by TweetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"643VJcWc639HcZJXQ+yQf6Wfu6sCEAHhuECeOphE3rp6p7DKKugH8fldmzcIUm6e51WDjMBvYkT4SbaBiskMUg==", "tweet"=>{"content"=>"こんにちは"}, "commit"=>"Tweetを送信"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:17
+  [1m[36mTweet Create (1.2ms)[0m  [1m[32mINSERT INTO "tweets" ("content") VALUES ($1) RETURNING "id"[0m  [["content", "こんにちは"]]
+  ↳ app/controllers/tweets_controller.rb:17
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:17
+Redirected to http://localhost:3000/tweets/new
+Completed 302 Found in 5ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/tweets/new" for ::1 at 2019-09-27 11:59:57 +0900
+Processing by TweetsController#new as HTML
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/_form.html.erb (1.0ms)
+  Rendered tweets/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 24ms (Views: 21.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tweets/confirm" for ::1 at 2019-09-27 12:00:01 +0900
+Processing by TweetsController#show as HTML
+  Parameters: {"id"=>"confirm"}
+  [1m[36mTweet Load (0.4ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" WHERE "tweets"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:51
+Completed 404 Not Found in 2ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Tweet with 'id'=confirm):
+  
+app/controllers/tweets_controller.rb:51:in `set_tweet'
+Started GET "/tweets" for ::1 at 2019-09-27 12:13:16 +0900
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/nishiotetsurou/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.5ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/views/tweets/index.html.erb:8
+  Rendered tweets/index.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 223ms (Views: 198.0ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/tweets/new" for ::1 at 2019-09-27 12:13:19 +0900
+Processing by TweetsController#new as HTML
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/_form.html.erb (8.0ms)
+  Rendered tweets/new.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 44ms (Views: 38.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tweets/confirm" for ::1 at 2019-09-27 12:13:24 +0900
+Processing by TweetsController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MBwigOk+JeQU5OUM3dBDk0Up6K/90KaEYtJKQ9RxmZeMk7i7DekFEeTSA0FvIU1Qh8tc9651tIdpPKFl1HxQ6A==", "tweet"=>{"content"=>"Good Morning"}, "commit"=>"Tweetする"}
+  Rendering tweets/confirm.html.erb within layouts/application
+  Rendered tweets/confirm.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 22ms (Views: 18.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tweets" for ::1 at 2019-09-27 12:13:32 +0900
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/views/tweets/index.html.erb:8
+  Rendered tweets/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 31ms (Views: 27.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tweets/28/edit" for ::1 at 2019-09-27 12:13:36 +0900
+Processing by TweetsController#edit as HTML
+  Parameters: {"id"=>"28"}
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" WHERE "tweets"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:51
+  Rendering tweets/edit.html.erb within layouts/application
+  Rendered tweets/_form.html.erb (2.5ms)
+  Rendered tweets/edit.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 40ms (Views: 31.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/tweets/new" for ::1 at 2019-09-27 12:13:41 +0900
+Processing by TweetsController#new as HTML
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/_form.html.erb (1.9ms)
+  Rendered tweets/new.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 41ms (Views: 36.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tweets/confirm" for ::1 at 2019-09-27 12:13:44 +0900
+Processing by TweetsController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lZvsMPlWhIzUSEx6AJxNVuga3mksgsWRKdoLtdiEhxMpFHYLHYGkeSR+qjeybUOVKvhqMX8n15IiNOCT2IlObA==", "tweet"=>{"content"=>"Hello world!"}, "commit"=>"Tweetする"}
+  Rendering tweets/confirm.html.erb within layouts/application
+  Rendered tweets/confirm.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 41ms (Views: 37.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tweets" for ::1 at 2019-09-27 12:13:46 +0900
+Processing by TweetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1PrccW/NNNSMf2P+yNTPHbqiTn+zyXpmLvTrAs2bGxFF0LmegLnYWjJTap6DajH8+Gh2WHG2GcNu/cO53xbJ+Q==", "tweet"=>{"content"=>"Hello world!"}, "commit"=>"Tweetを送信"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:17
+  [1m[36mTweet Create (1.0ms)[0m  [1m[32mINSERT INTO "tweets" ("content") VALUES ($1) RETURNING "id"[0m  [["content", "Hello world!"]]
+  ↳ app/controllers/tweets_controller.rb:17
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:17
+Redirected to http://localhost:3000/tweets/new
+Completed 302 Found in 7ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/tweets/new" for ::1 at 2019-09-27 12:13:46 +0900
+Processing by TweetsController#new as HTML
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/_form.html.erb (1.1ms)
+  Rendered tweets/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 27ms (Views: 24.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tweets/confirm" for ::1 at 2019-09-27 12:13:49 +0900
+Processing by TweetsController#show as HTML
+  Parameters: {"id"=>"confirm"}
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" WHERE "tweets"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:51
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Tweet with 'id'=confirm):
+  
+app/controllers/tweets_controller.rb:51:in `set_tweet'
+Started POST "/tweets/confirm" for ::1 at 2019-09-27 12:14:14 +0900
+Processing by TweetsController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kgiK4vP1bZ3POKjYGc8P7cTH2RHTEXulOIJUhGdqYKsDIu8NHIGBE3EUobhScfEMhg3hNhFuGAB4i3w/deeyQw==", "tweet"=>{"content"=>"Good Morning"}, "commit"=>"Tweetする"}
+  Rendering tweets/confirm.html.erb within layouts/application
+  Rendered tweets/confirm.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 30ms (Views: 26.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tweets" for ::1 at 2019-09-27 12:14:16 +0900
+Processing by TweetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SzmufTSToZnvEypeAvdnsbBRveLSkucsOQz0UQ1+92TaE8uS2+dNF1E/Iz5JSZlQ8puFxRDthIl5BdzqH/MljA==", "tweet"=>{"content"=>"Good Morning"}, "commit"=>"Tweetを送信"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:17
+  [1m[36mTweet Create (0.3ms)[0m  [1m[32mINSERT INTO "tweets" ("content") VALUES ($1) RETURNING "id"[0m  [["content", "Good Morning"]]
+  ↳ app/controllers/tweets_controller.rb:17
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:17
+Redirected to http://localhost:3000/tweets/new
+Completed 302 Found in 6ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/tweets/new" for ::1 at 2019-09-27 12:14:16 +0900
+Processing by TweetsController#new as HTML
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/_form.html.erb (1.2ms)
+  Rendered tweets/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 31ms (Views: 28.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tweets" for ::1 at 2019-09-27 12:17:27 +0900
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/nishiotetsurou/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  
+SyntaxError (/Users/nishiotetsurou/Web/diveintocode_web/twitter_clone/app/controllers/tweets_controller.rb:59: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/tweets_controller.rb:59: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/tweets" for ::1 at 2019-09-27 12:18:36 +0900
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/nishiotetsurou/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.6ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/views/tweets/index.html.erb:8
+  Rendered tweets/index.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 231ms (Views: 208.7ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/tweets/new" for ::1 at 2019-09-27 12:18:40 +0900
+Processing by TweetsController#new as HTML
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/_form.html.erb (7.2ms)
+  Rendered tweets/new.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 40ms (Views: 37.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tweets/confirm" for ::1 at 2019-09-27 12:18:43 +0900
+Processing by TweetsController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"61yqJLcduTKvKX/y7WjEA9P/JtXBNJRf+wBRi4pX4eZX0zAfU8qZx18fmb9fmcrAER2SjZKRhlzw7rqtiloomQ==", "tweet"=>{"content"=>"Hello world!"}, "commit"=>"Tweetする"}
+  Rendering tweets/confirm.html.erb within layouts/application
+  Rendered tweets/confirm.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 24ms (Views: 19.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tweets" for ::1 at 2019-09-27 12:18:45 +0900
+Processing by TweetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SEkyJPNowsD8BwLUSktrY7XYU5VHmUkrOrJVvztaZtvZY1fLHBwuTkIrC7QB9ZWC9xJrsoXmKo56u30EKde0Mw==", "tweet"=>{"content"=>"Hello world!"}, "commit"=>"Tweetを送信"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:17
+  [1m[36mTweet Create (1.1ms)[0m  [1m[32mINSERT INTO "tweets" ("content") VALUES ($1) RETURNING "id"[0m  [["content", "Hello world!"]]
+  ↳ app/controllers/tweets_controller.rb:17
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:17
+Redirected to http://localhost:3000/tweets/new
+Completed 302 Found in 6ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/tweets/new" for ::1 at 2019-09-27 12:18:45 +0900
+Processing by TweetsController#new as HTML
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/_form.html.erb (1.1ms)
+  Rendered tweets/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 26ms (Views: 21.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tweets/confirm" for ::1 at 2019-09-27 12:18:47 +0900
+Processing by TweetsController#show as HTML
+  Parameters: {"id"=>"confirm"}
+  [1m[36mTweet Load (0.5ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" WHERE "tweets"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:54
+Completed 404 Not Found in 6ms (ActiveRecord: 0.7ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Tweet with 'id'=confirm):
+  
+app/controllers/tweets_controller.rb:54:in `set_tweet'
+Started GET "/tweets" for ::1 at 2019-09-27 12:18:52 +0900
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.4ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/views/tweets/index.html.erb:8
+  Rendered tweets/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 43ms (Views: 38.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tweets/31/edit" for ::1 at 2019-09-27 12:18:54 +0900
+Processing by TweetsController#edit as HTML
+  Parameters: {"id"=>"31"}
+  [1m[36mTweet Load (1.2ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" WHERE "tweets"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:54
+  Rendering tweets/edit.html.erb within layouts/application
+  Rendered tweets/_form.html.erb (1.5ms)
+  Rendered tweets/edit.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 33ms (Views: 24.4ms | ActiveRecord: 1.2ms)
+
+
+Started PATCH "/tweets/31" for ::1 at 2019-09-27 12:18:56 +0900
+Processing by TweetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"w3lG0uSZiXoVT6Y9BysPFmtCKRpOTLoTmYZXg5GmPrObLfdZq3oO/lPyG7j4Rq+HtSzM+EWE4lsd2tlaSf75kg==", "tweet"=>{"content"=>"Hello world!"}, "commit"=>"Tweetする", "id"=>"31"}
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" WHERE "tweets"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:54
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:35
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:35
+Redirected to http://localhost:3000/tweets
+Completed 302 Found in 4ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/tweets" for ::1 at 2019-09-27 12:18:56 +0900
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/views/tweets/index.html.erb:8
+  Rendered tweets/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 34ms (Views: 30.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tweets/31/edit" for ::1 at 2019-09-27 12:19:00 +0900
+Processing by TweetsController#edit as HTML
+  Parameters: {"id"=>"31"}
+  [1m[36mTweet Load (0.5ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" WHERE "tweets"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:54
+  Rendering tweets/edit.html.erb within layouts/application
+  Rendered tweets/_form.html.erb (1.0ms)
+  Rendered tweets/edit.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 42ms (Views: 36.0ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/tweets/31" for ::1 at 2019-09-27 12:19:05 +0900
+Processing by TweetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aHFO8OrP6VxQ0R8U54367jdGogofcqvC/w/wtdXT+u0wJf97pSxu2BZsopEY4Fp/6ShH6BS684p7U35sDYs9zA==", "tweet"=>{"content"=>"Hello world!!"}, "commit"=>"Tweetする", "id"=>"31"}
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" WHERE "tweets"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:54
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:35
+  [1m[36mTweet Update (0.3ms)[0m  [1m[33mUPDATE "tweets" SET "content" = $1 WHERE "tweets"."id" = $2[0m  [["content", "Hello world!!"], ["id", 31]]
+  ↳ app/controllers/tweets_controller.rb:35
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:35
+Redirected to http://localhost:3000/tweets
+Completed 302 Found in 6ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/tweets" for ::1 at 2019-09-27 12:19:05 +0900
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.2ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/views/tweets/index.html.erb:8
+  Rendered tweets/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 32ms (Views: 28.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tweets" for ::1 at 2019-09-27 12:19:07 +0900
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/views/tweets/index.html.erb:8
+  Rendered tweets/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 39ms (Views: 32.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tweets/new" for ::1 at 2019-09-27 12:19:14 +0900
+Processing by TweetsController#new as HTML
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/_form.html.erb (1.3ms)
+  Rendered tweets/new.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 41ms (Views: 35.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tweets/confirm" for ::1 at 2019-09-27 12:19:18 +0900
+Processing by TweetsController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TVtW94PqRYfqbl0YbsoH3REDNL2i7uRYVYHwP1vYBhXx1MzMZz1lchpYu1XcOwke0+GA5fFL9ltebxsZW9XPag==", "tweet"=>{"content"=>"Good Morning"}, "commit"=>"Tweetする"}
+  Rendering tweets/confirm.html.erb within layouts/application
+  Rendered tweets/confirm.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 23ms (Views: 20.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tweets" for ::1 at 2019-09-27 12:19:20 +0900
+Processing by TweetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cIC9nhLH+EI3E78fqyLF0WaTv7COzrGczmzWm3c03Drhqthx/bMUzIk/tn/gnDswJFmHl0yx0jmOZf4gZbkO0g==", "tweet"=>{"content"=>"Good Morning"}, "commit"=>"Tweetを送信"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:17
+  [1m[36mTweet Create (0.3ms)[0m  [1m[32mINSERT INTO "tweets" ("content") VALUES ($1) RETURNING "id"[0m  [["content", "Good Morning"]]
+  ↳ app/controllers/tweets_controller.rb:17
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:17
+Redirected to http://localhost:3000/tweets/new
+Completed 302 Found in 5ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/tweets/new" for ::1 at 2019-09-27 12:19:20 +0900
+Processing by TweetsController#new as HTML
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/_form.html.erb (0.9ms)
+  Rendered tweets/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 20ms (Views: 17.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tweets/confirm" for ::1 at 2019-09-27 12:19:22 +0900
+Processing by TweetsController#show as HTML
+  Parameters: {"id"=>"confirm"}
+  [1m[36mTweet Load (0.4ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" WHERE "tweets"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:54
+Completed 404 Not Found in 2ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Tweet with 'id'=confirm):
+  
+app/controllers/tweets_controller.rb:54:in `set_tweet'
+Started GET "/tweets/new" for ::1 at 2019-09-27 12:30:45 +0900
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/nishiotetsurou/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by TweetsController#new as HTML
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/_form.html.erb (6.6ms)
+  Rendered tweets/new.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 229ms (Views: 201.7ms | ActiveRecord: 9.5ms)
+
+
+Started POST "/tweets/confirm" for ::1 at 2019-09-27 12:30:51 +0900
+Processing by TweetsController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WNGpUPTqTYMeGdnFe3ysUPHQHPb4QNRvWeba3s4iWXnJ+8y/G56hDaA10KUwwlKxsxok0To/t8oZ7/Jl3K+LkQ==", "tweet"=>{"content"=>"Hello world!"}, "commit"=>"Tweetする"}
+  Rendering tweets/confirm.html.erb within layouts/application
+  Rendered tweets/confirm.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 25ms (Views: 20.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tweets" for ::1 at 2019-09-27 12:30:55 +0900
+Processing by TweetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ACH2euWxYmPP8ezRMOHpAhH3bbsSBLtqPBjLD1SlYEKRC5OVCsWO7XHd5bF7XxfjUz1VnNB72M98EeO0Riiyqg==", "tweet"=>{"content"=>"Hello world!"}, "commit"=>"Tweetを送信"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:17
+  [1m[36mTweet Create (0.9ms)[0m  [1m[32mINSERT INTO "tweets" ("content") VALUES ($1) RETURNING "id"[0m  [["content", "Hello world!"]]
+  ↳ app/controllers/tweets_controller.rb:17
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:17
+Redirected to http://localhost:3000/tweets/new
+Completed 302 Found in 7ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/tweets/new" for ::1 at 2019-09-27 12:30:56 +0900
+Processing by TweetsController#new as HTML
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/_form.html.erb (1.1ms)
+  Rendered tweets/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 27ms (Views: 25.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tweets/confirm" for ::1 at 2019-09-27 12:30:59 +0900
+Processing by TweetsController#show as HTML
+  Parameters: {"id"=>"confirm"}
+  [1m[36mTweet Load (0.4ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" WHERE "tweets"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:51
+Completed 404 Not Found in 6ms (ActiveRecord: 0.6ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Tweet with 'id'=confirm):
+  
+app/controllers/tweets_controller.rb:51:in `set_tweet'
+Started GET "/tweets/" for ::1 at 2019-09-27 13:01:12 +0900
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/nishiotetsurou/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.6ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/views/tweets/index.html.erb:8
+  Rendered tweets/index.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 225ms (Views: 201.1ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/tweets/new" for ::1 at 2019-09-27 13:01:17 +0900
+Processing by TweetsController#new as HTML
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/_form.html.erb (6.3ms)
+  Rendered tweets/new.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 44ms (Views: 37.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tweets/confirm" for ::1 at 2019-09-27 13:01:20 +0900
+Processing by TweetsController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HjIRVtuvXrNB0zSVpNoYJb6656tb5cC3OqAm7q6IziaivYttP3h+RrHl0tgWKxbmfFhT8whA0rQxTs3IroUHWQ==", "tweet"=>{"content"=>"こんにちは"}, "commit"=>"Tweetする"}
+  Rendering tweets/confirm.html.erb within layouts/application
+  Rendered tweets/confirm.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 23ms (Views: 18.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tweets" for ::1 at 2019-09-27 13:01:23 +0900
+Processing by TweetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Hx8HJaVJ1wFTwoTbRiT8wTvaNOZ9SNJluAYeF7I2xA6ONWLKSj07j+3ujbsNmgIgeRAMwb83scD4DzasoLsW5g==", "tweet"=>{"content"=>"こんにちは"}, "commit"=>"Tweetを送信"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:21
+  [1m[36mTweet Create (3.1ms)[0m  [1m[32mINSERT INTO "tweets" ("content") VALUES ($1) RETURNING "id"[0m  [["content", "こんにちは"]]
+  ↳ app/controllers/tweets_controller.rb:21
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:21
+Redirected to http://localhost:3000/tweets/new
+Completed 302 Found in 8ms (ActiveRecord: 4.4ms)
+
+
+Started GET "/tweets/new" for ::1 at 2019-09-27 13:01:23 +0900
+Processing by TweetsController#new as HTML
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/_form.html.erb (1.0ms)
+  Rendered tweets/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 26ms (Views: 23.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tweets/confirm" for ::1 at 2019-09-27 13:01:26 +0900
+Processing by TweetsController#show as HTML
+  Parameters: {"id"=>"confirm"}
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" WHERE "tweets"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:55
+Completed 404 Not Found in 6ms (ActiveRecord: 0.5ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Tweet with 'id'=confirm):
+  
+app/controllers/tweets_controller.rb:55:in `set_tweet'
+Started GET "/tweets/" for ::1 at 2019-09-27 13:08:33 +0900
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/nishiotetsurou/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.4ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/views/tweets/index.html.erb:8
+  Rendered tweets/index.html.erb within layouts/application (16.5ms)
+Completed 200 OK in 233ms (Views: 215.0ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/tweets/new" for ::1 at 2019-09-27 13:08:48 +0900
+Processing by TweetsController#new as HTML
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/_form.html.erb (9.0ms)
+  Rendered tweets/new.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 47ms (Views: 43.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tweets/confirm" for ::1 at 2019-09-27 13:09:00 +0900
+Processing by TweetsController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZgvT35C0NZ3XLv6wwOaI9afeCQ/bC3SDkivY3e/jXrfahEnkdGMVaCcYGP1yF4Y2ZTy9V4iuZoCZxTP77+6XyA==", "tweet"=>{"content"=>"こんにちは"}, "commit"=>"Tweetする"}
+  Rendering tweets/confirm.html.erb within layouts/application
+  Rendered tweets/confirm.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 23ms (Views: 18.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tweets" for ::1 at 2019-09-27 13:09:36 +0900
+Processing by TweetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HZstHViYl4C7j1cXb2iqNI+O/gN5uGfuuKoBad0o8sSMsUjyt+x7DgWjXnck1lTVzUTGJLvHBEv4oynSz6UgLA==", "tweet"=>{"content"=>"こんにちは"}, "commit"=>"Tweetを送信"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:17
+  [1m[36mTweet Create (0.6ms)[0m  [1m[32mINSERT INTO "tweets" ("content") VALUES ($1) RETURNING "id"[0m  [["content", "こんにちは"]]
+  ↳ app/controllers/tweets_controller.rb:17
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:17
+Redirected to http://localhost:3000/tweets/new
+Completed 302 Found in 6ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/tweets/new" for ::1 at 2019-09-27 13:09:36 +0900
+Processing by TweetsController#new as HTML
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/_form.html.erb (0.9ms)
+  Rendered tweets/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 26ms (Views: 21.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tweets/confirm" for ::1 at 2019-09-27 13:10:03 +0900
+Processing by TweetsController#show as HTML
+  Parameters: {"id"=>"confirm"}
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" WHERE "tweets"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:51
+Completed 404 Not Found in 12ms (ActiveRecord: 0.6ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Tweet with 'id'=confirm):
+  
+app/controllers/tweets_controller.rb:51:in `set_tweet'
+Started GET "/tweets/confirm" for ::1 at 2019-09-27 13:18:24 +0900
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/nishiotetsurou/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by TweetsController#show as HTML
+  Parameters: {"id"=>"confirm"}
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" WHERE "tweets"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:51
+Completed 404 Not Found in 22ms (ActiveRecord: 9.8ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Tweet with 'id'=confirm):
+  
+app/controllers/tweets_controller.rb:51:in `set_tweet'
+Started GET "/tweets/" for ::1 at 2019-09-27 13:18:28 +0900
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.4ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/views/tweets/index.html.erb:8
+  Rendered tweets/index.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 276ms (Views: 269.6ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/tweets/17" for ::1 at 2019-09-27 13:18:35 +0900
+Processing by TweetsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"vy0zTkSmIx+rihAUB1vPBCKKy5hE7liU0tX4B5grLWUuB1ahq9LPkRWmGXRM5THlYEDzv4aROzGS3NC8iqb/jQ==", "id"=>"17"}
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" WHERE "tweets"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:40
+  [1m[36mTweet Destroy (0.9ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 17]]
+  ↳ app/controllers/tweets_controller.rb:40
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:40
+Redirected to http://localhost:3000/tweets
+Completed 302 Found in 6ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/tweets" for ::1 at 2019-09-27 13:18:35 +0900
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/views/tweets/index.html.erb:8
+  Rendered tweets/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 38ms (Views: 35.2ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/tweets/18" for ::1 at 2019-09-27 13:18:36 +0900
+Processing by TweetsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"wsKedXEihkUPuVD7PLG9pSDcRaTbokBoF1/qARyfFlRT6PuanlZqy7GVWZt3D0NEYhZ9gxndI81XVsK6DhLEvA==", "id"=>"18"}
+  [1m[36mTweet Load (1.5ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" WHERE "tweets"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:40
+  [1m[36mTweet Destroy (4.3ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 18]]
+  ↳ app/controllers/tweets_controller.rb:40
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:40
+Redirected to http://localhost:3000/tweets
+Completed 302 Found in 10ms (ActiveRecord: 6.3ms)
+
+
+Started GET "/tweets" for ::1 at 2019-09-27 13:18:36 +0900
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.9ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/views/tweets/index.html.erb:8
+  Rendered tweets/index.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 39ms (Views: 34.2ms | ActiveRecord: 0.9ms)
+
+
+Started DELETE "/tweets/25" for ::1 at 2019-09-27 13:18:38 +0900
+Processing by TweetsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Kr1VAj00n2cwyV12lkxH637RqGqUOGoH3rMBNw5Zzh67lzDt0kBz6Y7lVBbd8rkKPBuQTVZHCaKeuimMHNQc9g==", "id"=>"25"}
+  [1m[36mTweet Load (0.6ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" WHERE "tweets"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:40
+  [1m[36mTweet Destroy (1.0ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 25]]
+  ↳ app/controllers/tweets_controller.rb:40
+  [1m[35m (3.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:40
+Redirected to http://localhost:3000/tweets
+Completed 302 Found in 10ms (ActiveRecord: 5.8ms)
+
+
+Started GET "/tweets" for ::1 at 2019-09-27 13:18:38 +0900
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.2ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/views/tweets/index.html.erb:8
+  Rendered tweets/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 28ms (Views: 25.8ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/tweets/19" for ::1 at 2019-09-27 13:18:40 +0900
+Processing by TweetsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"8Px4XtdjRQ8gEDEzW0W4gmpCNtufOLLj2EDxbTz1kslh1h2xOBepgZ48OFMQ+0ZjKIgO/F1H0UaYSdnWLnhAIQ==", "id"=>"19"}
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" WHERE "tweets"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:40
+  [1m[36mTweet Destroy (0.4ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 19]]
+  ↳ app/controllers/tweets_controller.rb:40
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:40
+Redirected to http://localhost:3000/tweets
+Completed 302 Found in 5ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/tweets" for ::1 at 2019-09-27 13:18:40 +0900
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/views/tweets/index.html.erb:8
+  Rendered tweets/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 30ms (Views: 27.9ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/tweets/14" for ::1 at 2019-09-27 13:18:44 +0900
+Processing by TweetsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"gLOEKeuqFNmHCgTkx47ulHaKa22Lsh4ETO7rx07t6dERmeHGBN74VzkmDYSMMBB1NEBTSknNfaEM58N8XGA7OQ==", "id"=>"14"}
+  [1m[36mTweet Load (0.5ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" WHERE "tweets"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:40
+  [1m[36mTweet Destroy (0.3ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 14]]
+  ↳ app/controllers/tweets_controller.rb:40
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:40
+Redirected to http://localhost:3000/tweets
+Completed 302 Found in 4ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/tweets" for ::1 at 2019-09-27 13:18:44 +0900
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/views/tweets/index.html.erb:8
+  Rendered tweets/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 26ms (Views: 23.3ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/tweets/23" for ::1 at 2019-09-27 13:18:46 +0900
+Processing by TweetsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"F0diwsZ0I4s42ECLPyNvDoHkVKIQNKhB5Rs7kK1dFtuGbQctKQDPBYb0Set0nZHvwy5shdJLy+SlEhMrv9DEMw==", "id"=>"23"}
+  [1m[36mTweet Load (0.2ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" WHERE "tweets"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:40
+  [1m[36mTweet Destroy (0.3ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 23]]
+  ↳ app/controllers/tweets_controller.rb:40
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:40
+Redirected to http://localhost:3000/tweets
+Completed 302 Found in 6ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/tweets" for ::1 at 2019-09-27 13:18:46 +0900
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.2ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/views/tweets/index.html.erb:8
+  Rendered tweets/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 31ms (Views: 28.4ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/tweets/26" for ::1 at 2019-09-27 13:18:50 +0900
+Processing by TweetsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"gVCoCFDRcRzWN+/ilC6QZYICNRUxmfr79Q6QqTvK3RUQes3nv6Wdkmgb5oLfkG6EwMgNMvPmmV61B7gSKUcP/Q==", "id"=>"26"}
+  [1m[36mTweet Load (0.2ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" WHERE "tweets"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:40
+  [1m[36mTweet Destroy (0.3ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 26]]
+  ↳ app/controllers/tweets_controller.rb:40
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:40
+Redirected to http://localhost:3000/tweets
+Completed 302 Found in 5ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/tweets" for ::1 at 2019-09-27 13:18:50 +0900
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.4ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/views/tweets/index.html.erb:8
+  Rendered tweets/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 26ms (Views: 23.4ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/tweets/34" for ::1 at 2019-09-27 13:18:53 +0900
+Processing by TweetsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"bX05lJ3T2SZLHdNVj/jPvrMOrcombPOXHtqzawC9reX8V1x7cqc1qPUx2jXERjFf8cSV7eQTkDJe05vQEjB/DQ==", "id"=>"34"}
+  [1m[36mTweet Load (0.2ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" WHERE "tweets"."id" = $1 LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:40
+  [1m[36mTweet Destroy (0.2ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 34]]
+  ↳ app/controllers/tweets_controller.rb:40
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:40
+Redirected to http://localhost:3000/tweets
+Completed 302 Found in 4ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/tweets" for ::1 at 2019-09-27 13:18:53 +0900
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/views/tweets/index.html.erb:8
+  Rendered tweets/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 25ms (Views: 21.5ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/tweets/20" for ::1 at 2019-09-27 13:18:55 +0900
+Processing by TweetsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"4n8why1vlO34ZH31migppEbuAyfTtSm8sxT7EFVRaWBzVVVowht4Y0ZIdJXRltdFBCQ7ABHKShnzHdOrR9y7iA==", "id"=>"20"}
+  [1m[36mTweet Load (0.5ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" WHERE "tweets"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:40
+  [1m[36mTweet Destroy (0.3ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 20]]
+  ↳ app/controllers/tweets_controller.rb:40
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:40
+Redirected to http://localhost:3000/tweets
+Completed 302 Found in 8ms (ActiveRecord: 3.8ms)
+
+
+Started GET "/tweets" for ::1 at 2019-09-27 13:18:55 +0900
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.2ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/views/tweets/index.html.erb:8
+  Rendered tweets/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 26ms (Views: 23.9ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/tweets/31" for ::1 at 2019-09-27 13:18:57 +0900
+Processing by TweetsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"B3k67+GrdO9/2hEnchRRSvTEoKsHtc3zPSWYQX5sLh2WU18ADt+YYcH2GEc5qq+rtg6YjMXKrlZ9LLD6bOH89Q==", "id"=>"31"}
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" WHERE "tweets"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:40
+  [1m[36mTweet Destroy (0.3ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 31]]
+  ↳ app/controllers/tweets_controller.rb:40
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:40
+Redirected to http://localhost:3000/tweets
+Completed 302 Found in 5ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/tweets" for ::1 at 2019-09-27 13:18:57 +0900
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.2ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/views/tweets/index.html.erb:8
+  Rendered tweets/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 25ms (Views: 22.6ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/tweets/28" for ::1 at 2019-09-27 13:19:00 +0900
+Processing by TweetsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"6YbTiP7M37cudDiZF9SLXG8+7q4BON9QGnl4kg3Jj+t4rLZnEbgzOZBYMflcanW9LfTWicNHvPVacFApH0RdAw==", "id"=>"28"}
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" WHERE "tweets"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:40
+  [1m[36mTweet Destroy (0.3ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 28]]
+  ↳ app/controllers/tweets_controller.rb:40
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:40
+Redirected to http://localhost:3000/tweets
+Completed 302 Found in 5ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/tweets" for ::1 at 2019-09-27 13:19:00 +0900
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.7ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/views/tweets/index.html.erb:8
+  Rendered tweets/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 28ms (Views: 23.8ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/tweets/29" for ::1 at 2019-09-27 13:19:02 +0900
+Processing by TweetsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"SntpusHDDps1B/VqaHfWUGKjKDrqglMhmTmHgxFHCb7bUQxVLrfiFYsr/AojySixIGkQHSj9MITZMK84A8rbVg==", "id"=>"29"}
+  [1m[36mTweet Load (0.2ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" WHERE "tweets"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:40
+  [1m[36mTweet Destroy (0.6ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 29]]
+  ↳ app/controllers/tweets_controller.rb:40
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:40
+Redirected to http://localhost:3000/tweets
+Completed 302 Found in 5ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/tweets" for ::1 at 2019-09-27 13:19:02 +0900
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.7ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/views/tweets/index.html.erb:8
+  Rendered tweets/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 25ms (Views: 22.3ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/tweets/30" for ::1 at 2019-09-27 13:19:05 +0900
+Processing by TweetsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"dRR0bjgLabuRL32UcHtR5Kur6KhAvSbqK2Qrpd4Syp/kPhGB13+FNS8DdPQ7xa8F6WHQj4LCRU9rbQMezJ8Ydw==", "id"=>"30"}
+  [1m[36mTweet Load (0.2ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" WHERE "tweets"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:40
+  [1m[36mTweet Destroy (0.5ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 30]]
+  ↳ app/controllers/tweets_controller.rb:40
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:40
+Redirected to http://localhost:3000/tweets
+Completed 302 Found in 6ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/tweets" for ::1 at 2019-09-27 13:19:05 +0900
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.2ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/views/tweets/index.html.erb:8
+  Rendered tweets/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 23ms (Views: 20.7ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/tweets/32" for ::1 at 2019-09-27 13:19:07 +0900
+Processing by TweetsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ZFmCtreWrpULKfTYRK9rg16V3txwLr1CPbtbergEOX31c+dZWOJCG7UF/bgPEZViHF/m+7JR3ud9snPBqonrlQ==", "id"=>"32"}
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" WHERE "tweets"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:40
+  [1m[36mTweet Destroy (0.3ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 32]]
+  ↳ app/controllers/tweets_controller.rb:40
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:40
+Redirected to http://localhost:3000/tweets
+Completed 302 Found in 5ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/tweets" for ::1 at 2019-09-27 13:19:07 +0900
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/views/tweets/index.html.erb:8
+  Rendered tweets/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 22ms (Views: 19.2ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/tweets/35" for ::1 at 2019-09-27 13:19:10 +0900
+Processing by TweetsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"/9D0s4LvuKK6nvT/z9mPrv9ExtudIIlicSQMeuwuWwRu+pFcbZtULASy/Z+EZ3FPvY7+/F9f6scxLSTB/qOJ7A==", "id"=>"35"}
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" WHERE "tweets"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:40
+  [1m[36mTweet Destroy (0.8ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 35]]
+  ↳ app/controllers/tweets_controller.rb:40
+  [1m[35m (3.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:40
+Redirected to http://localhost:3000/tweets
+Completed 302 Found in 8ms (ActiveRecord: 4.9ms)
+
+
+Started GET "/tweets" for ::1 at 2019-09-27 13:19:10 +0900
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.5ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/views/tweets/index.html.erb:8
+  Rendered tweets/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 38ms (Views: 35.2ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/tweets/16" for ::1 at 2019-09-27 13:19:20 +0900
+Processing by TweetsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"qrs89i2whZrfCOA4bMHR0p+sl/147ewfTMLV2GHCBVw7kVkZwsRpFGEk6Vgnfy8z3Wav2rqSj7oMy/1jc0/XtA==", "id"=>"16"}
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" WHERE "tweets"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:40
+  [1m[36mTweet Destroy (0.2ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 16]]
+  ↳ app/controllers/tweets_controller.rb:40
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:40
+Redirected to http://localhost:3000/tweets
+Completed 302 Found in 5ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/tweets" for ::1 at 2019-09-27 13:19:20 +0900
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.2ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/views/tweets/index.html.erb:8
+  Rendered tweets/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 24ms (Views: 20.8ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/tweets/15" for ::1 at 2019-09-27 13:19:27 +0900
+Processing by TweetsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"3jK64nXgV7RSnECqhi7U88eAxiPlJAAWaHXq4Ym+1o9PGN8NmpS7OuywScrNkCoShUr+BCdbY7MofMJamzMEZw==", "id"=>"15"}
+  [1m[36mTweet Load (0.2ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" WHERE "tweets"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:40
+  [1m[36mTweet Destroy (0.4ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 15]]
+  ↳ app/controllers/tweets_controller.rb:40
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:40
+Redirected to http://localhost:3000/tweets
+Completed 302 Found in 6ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/tweets" for ::1 at 2019-09-27 13:19:27 +0900
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.2ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/views/tweets/index.html.erb:8
+  Rendered tweets/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 25ms (Views: 22.4ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/tweets/6" for ::1 at 2019-09-27 13:19:47 +0900
+Processing by TweetsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"z+rMSCQKuoec+ewzDdagRYKhHuAjW7NrmLIPsSdjbodewKmny35WCSLV5VNGaF6kwGsmx+Ek0M7YuycKNe68bw==", "id"=>"6"}
+  [1m[36mTweet Load (0.4ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" WHERE "tweets"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:40
+  [1m[36mTweet Destroy (0.2ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 6]]
+  ↳ app/controllers/tweets_controller.rb:40
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:40
+Redirected to http://localhost:3000/tweets
+Completed 302 Found in 7ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/tweets" for ::1 at 2019-09-27 13:19:47 +0900
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.6ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/views/tweets/index.html.erb:8
+  Rendered tweets/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 26ms (Views: 22.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/tweets/new" for ::1 at 2019-09-27 13:20:06 +0900
+Processing by TweetsController#new as HTML
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/_form.html.erb (16.6ms)
+  Rendered tweets/new.html.erb within layouts/application (20.7ms)
+Completed 200 OK in 46ms (Views: 43.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tweets/confirm" for ::1 at 2019-09-27 13:20:11 +0900
+Processing by TweetsController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XhB7rqw82AHOsOnZAtSZwq7GZBZwXqJMV5eUbLb0SUzin+GVSOv49D6GD5SwJZcBbCTQTiP7sE9ceX9KtvmAMw==", "tweet"=>{"content"=>"a"}, "commit"=>"Tweetする"}
+  Rendering tweets/confirm.html.erb within layouts/application
+  Rendered tweets/confirm.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 23ms (Views: 18.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tweets" for ::1 at 2019-09-27 13:20:12 +0900
+Processing by TweetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vgDfZ3+L4MOd/XUGeAgcDXVGu7OkgRWqcFnmJxuD4tUvKrqIkP8MTSPRfGYztuLsN4yDlGb+dg8wUM6cCQ4wPQ==", "tweet"=>{"content"=>"a"}, "back"=>"戻る"}
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/_form.html.erb (1.3ms)
+  Rendered tweets/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 23ms (Views: 21.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tweets/confirm" for ::1 at 2019-09-27 13:20:15 +0900
+Processing by TweetsController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uPUzr6TH4X7yF18smXiDj3zK5gO3z1ZbhSKxxAQaFC0p31ZAS7MN8Ew7VkzSxn1uPgDeJHWwNf7FK5l/FpfGxQ==", "tweet"=>{"content"=>"a"}, "commit"=>"Tweetする"}
+  Rendering tweets/confirm.html.erb within layouts/application
+  Rendered tweets/confirm.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 25ms (Views: 21.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tweets" for ::1 at 2019-09-27 13:20:17 +0900
+Processing by TweetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1Q/qBGRFtWK2UPycvG891wzcyBIPwLcmEY9hzQpn15xEJY/rizFZ7Ah89fz30cM2ThbwNc2/1INRhkl2GOoFdA==", "tweet"=>{"content"=>"a"}, "commit"=>"Tweetを送信"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:17
+  [1m[36mTweet Create (3.0ms)[0m  [1m[32mINSERT INTO "tweets" ("content") VALUES ($1) RETURNING "id"[0m  [["content", "a"]]
+  ↳ app/controllers/tweets_controller.rb:17
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:17
+Redirected to http://localhost:3000/tweets/new
+Completed 302 Found in 9ms (ActiveRecord: 4.4ms)
+
+
+Started GET "/tweets/new" for ::1 at 2019-09-27 13:20:17 +0900
+Processing by TweetsController#new as HTML
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/_form.html.erb (1.3ms)
+  Rendered tweets/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 26ms (Views: 22.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tweets" for ::1 at 2019-09-27 13:20:19 +0900
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.6ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/views/tweets/index.html.erb:8
+  Rendered tweets/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 27ms (Views: 22.5ms | ActiveRecord: 0.6ms)
+
+

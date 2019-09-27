@@ -17,3 +17,6 @@ module TwitterClone
     # the framework and any gems in your application.
   end
 end
+
+config.timezone = 'Tokyo'
+config.active_record.default_timezone = :local

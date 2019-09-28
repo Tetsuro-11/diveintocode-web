@@ -1,19 +1,25 @@
-<h1>Tweet一覧</h1>
+<h1>ホーム</h1>
 <p><%= notice %></p>
-<table>
-  <tr>
-    <th>みんなのTweet</th>
-  </tr>
 
-<% @tweet.each do |tweet| %>
-  <tr>
-    <td><%= tweet.content %></td>
-    <td><%= link_to '詳細を確認する', tweet_path(tweet.id) %></td>
-    <td><%= link_to "tweetを編集する", edit_tweet_path(tweet.id) %></td>
-    <td><%= link_to "tweetを削除する", tweet_path(tweet.id), method: :delete,data: { confirm: 'tweetを削除します' } %></td>
-  </tr>
-<% end %>
+<%= link_to 'Tweetする', new_tweet_path, class:"btn btn-primary rounded-pill" %>
 
-</table>
+<div class="container">
+<div class="card" style="width:75%;"
 
-<%= link_to 'Tweetする', new_tweet_path %>
+    <ul class="list-group list-group-flush">
+    <% @tweet.each do |tweet| %>
+
+      <li  class="list-group-item" href=<%=tweet_path(tweet.id)%>><%= tweet.content %>
+
+      <div class="text-right">
+      <%= link_to "編集", edit_tweet_path(tweet.id) , class:"btn btn-primary btn-sm"%>
+      <%= link_to "削除", tweet_path(tweet.id),  method: :delete,data: { confirm: 'tweetを削除します' }, class:"btn btn-secondary btn-sm"%>
+      </div>
+      </li>
+              
+    <% end %>
+    </ul>
+
+    </div>
+</div>
+</div>

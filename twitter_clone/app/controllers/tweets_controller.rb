@@ -15,7 +15,7 @@ class TweetsController < ApplicationController
       render :new
     else
       if @tweet.save
-        redirect_to new_tweet_path, notice:"Tweetを投稿しました。"
+        redirect_to tweets_path, notice:"Tweetを投稿しました。"
       else
         render :new
       end

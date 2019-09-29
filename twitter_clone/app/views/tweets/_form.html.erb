@@ -9,9 +9,6 @@
   </div>
 <% end %>
 
-
-
-
 <div class='container'>
 <%= form_with(model: @tweet, local: true, url:choose_new_or_edit) do |form| %>
   <%= link_to "キャンセル", tweets_path,role:"button",class: 'btn btn-primary' %>
@@ -20,7 +17,7 @@
   <div class="form-group">
     <div class="row">
       <div class="col-lg-8">
-    <%= form.text_area :content, id:"tweet_description",class:"form-control",rows:"5", placeholder: "いまどうしてる？" %>
+         <%= form.text_area :content, id:"tweet_description",class:"form-control",rows:"5", placeholder: "いまどうしてる？" %>
       </div>
     </div>
   </div>

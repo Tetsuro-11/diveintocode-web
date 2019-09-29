@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TwitterClone</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+ <header class="navbar navbar-fixed-top" style="background-color:#00acee;">
+      <div class="container">
+        <h2><font color="white">twitter_clone</font> </h2>
+      </div>
+  </header>
+
+  <body>
+      <%= yield %>
+  </body>
+
+<div class='wrapper'>
+<footer class="navbar" style="background-color:#00acee;">
+  <p><font color='white'>2019 twitter_clone</font></p>
+</footer>
+</div>
+</html>

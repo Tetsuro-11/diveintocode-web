@@ -1,0 +1,25 @@
+<% if @tweet.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= @tweet.errors.count %>件のエラーがあります。</h2>
+    <ul>
+    <% @tweet.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<div class='container'>
+<%= form_with(model: @tweet, local: true, url:choose_new_or_edit) do |form| %>
+  <%= link_to "キャンセル", tweets_path,role:"button",class: 'btn btn-primary' %>
+  <%= form.submit("Tweet",class: 'btn btn-primary') %>
+  
+  <div class="form-group">
+    <div class="row">
+      <div class="col-lg-8">
+         <%= form.text_area :content, id:"tweet_description",class:"form-control",rows:"5", placeholder: "いまどうしてる？" %>
+      </div>
+    </div>
+  </div>
+<% end %>
+</div>

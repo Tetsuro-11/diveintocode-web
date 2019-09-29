@@ -1,0 +1,13 @@
+<div class="form-group">
+<%= form_with(model: @tweet, url: tweets_path, local: true) do |form| %>
+  <%= form.hidden_field :content %>
+  <h3>このTweetを投稿します。</h3>
+
+  <ul class="list-group list-group-flush">
+      <li  class="list-group-item" %><%=@tweet.content %></li>
+
+
+  <%= form.submit  "Tweetを送信",class:"btn btn-primary btn-sm" %>
+  <%= form.submit  "戻る", name: 'back',class:"btn btn-primary btn-sm" %>
+<% end %>
+</div>

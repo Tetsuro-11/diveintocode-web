@@ -15,7 +15,7 @@ class Player
       
       
       player_hand = gets
-      if player_hand =~ /^[0-9]+$/
+      if (player_hand.length===1) or (player_hand =~ /^[0-3]$/)
          player_hand = player_hand.to_i
          return player_hand
           

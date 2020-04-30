@@ -1,0 +1,157 @@
+.header {
+  background-color: #F5B4B3;
+  height: auto;
+  font-size: 1.5rem;
+}
+
+.text {
+    width: 480px;
+    float: right;
+}
+
+.top_menu li {
+  float: right;
+  width: auto;
+}
+
+.top_menu li a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  padding: 1.15rem;
+}
+
+.top_menu li a:hover {
+  text-decoration: underline;
+}
+
+.logo_image {
+  width: 7.5rem;
+  float: left;
+  margin: 0%;
+}
+
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+
+
+#form{
+    width:480px;
+    height: 7rem;
+}
+
+#logo{
+    width:15%;
+    margin:0px;
+}
+#contact{
+    width : 100%;
+}
+
+#text_form{
+    width:150px;
+}
+
+
+#submit_form{
+  background-color: #008080;
+  color: #fff;
+  width: 5rem;
+  padding: 1rem;
+  font-size: 1rem;
+    
+}
+#submit_form:hover{
+    opacity: 0.6;
+    
+}
+
+
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  width: 980px;
+  margin: 0 auto;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+.logo_image {
+  width: 110px;
+  float: left;
+  margin: 0;
+}
+
+.image_area{
+  width: 100%;
+}
+
+.wrapper{
+  margin-top: 10px;
+}
+
+.side_menu{
+  width: 300px;
+  float: left;
+}
+
+.side_menu li{
+  background-color: #F5B4B3;
+  height: 6rem;
+  margin-bottom: 10px;
+}
+
+.side_menu li a{
+  font-size:2rem;
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  padding: 2rem;
+}
+
+.banner img{
+  width: 100%;
+}
+
+.banner{
+  margin-top: 20px;
+}
+
+.content{
+  float: left;
+  height: 200px;
+}
+
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.footer{
+  background-color: #4D4D4D;
+  height: 100px;
+  width: 100%;
+}
+
+.footer p {
+  font-size: 1rem;
+  color: #fff;
+}
+
+
+
